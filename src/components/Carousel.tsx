@@ -25,7 +25,7 @@ export function CarouselWithContent() {
                     />
                     <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
                         <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl">
-                            Waishuangxi River
+                            Waishuangxi
                         </Typography>
                     </div>
                 </div>
