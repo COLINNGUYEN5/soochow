@@ -4,7 +4,7 @@ import {SponsorCard} from "../components/SponsorCard.tsx";
 
 export default function About() {
     return (
-        <div className="flex flex-col text-center my-10 gap-y-10">
+        <div className="flex flex-col text-center my-10 gap-y-10 overflow-auto">
 
             <label className="text-6xl font-bold">Meet the Team!</label>
             <TeamCard/>
@@ -21,7 +21,7 @@ export default function About() {
 
             <label className="text-6xl font-bold">Advisors</label>
             <AdvisorCard/>
-            <div className="flex justify-center container mx-auto pt-10 px-10 pb-10 border-b-1 border-gray-200">
+            <div className="flex justify-center container mx-auto px-10 pb-10 border-b-1 border-gray-200">
                 <p className="text-xl text-gray-800">
                     The team would like to extend our deepest gratitude to our advisors, Dr. Grant Burrier, Dr. Philip Hultquist, and Dr. Wen-Hua Du,
                     for their guidance and expertise which has been invaluable to the success of this project. Their feedback and insights
@@ -31,7 +31,7 @@ export default function About() {
 
             <label className="text-6xl font-bold">Sponsors</label>
             <SponsorCard/>
-            <div className="flex justify-center container mx-auto pt-10 px-10 pb-10">
+            <div className="flex justify-center container mx-auto px-10 pb-10">
                 <p className="text-xl text-gray-800">
                     This project would not have been possible without the help of our sponsors, Dr. Mi Chienkuo, Dr. Fu-sheng Shih, and Jill Hsiung.
                     We are very grateful for their initiative of starting this project, and fostering the collaboration between WPI and Soochow University.

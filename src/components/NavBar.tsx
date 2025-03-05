@@ -13,24 +13,19 @@ const Navbar: React.FC = () => {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-4">
                     <li>
-                        <Link to="/" className="hover:text-gray-300">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/about" className="hover:text-gray-300">
                             About
                         </Link>
                     </li>
                     <li>
-                        <a href="#services" className="hover:text-gray-300">
-                            Services
-                        </a>
+                        <Link to="/location" className="hover:text-gray-300">
+                            Locations
+                        </Link>
                     </li>
                     <li>
-                        <a href="#contact" className="hover:text-gray-300">
-                            Contact
-                        </a>
+                        <Link to="/vlogs" className="hover:text-gray-300">
+                            Vlogs
+                        </Link>
                     </li>
                 </ul>
                 {/* Mobile Menu Button */}
@@ -57,26 +52,21 @@ const Navbar: React.FC = () => {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <ul className="md:hidden flex flex-col gap-2 mt-2 bg-blue-700 p-4 rounded shadow-md">
-                    <li>
-                        <Link to="/" className="block hover:text-gray-300">
-                            Home
-                        </Link>
-                    </li>
+                <ul className="md:hidden flex flex-col gap-2 mt-2 bg-black p-4 rounded shadow-md">
                     <li>
                         <Link to="/about" className="block hover:text-gray-300">
                             About
                         </Link>
                     </li>
                     <li>
-                        <a href="#services" className="block hover:text-gray-300">
-                            Services
-                        </a>
+                        <Link to="/location" className="block hover:text-gray-300">
+                            Location
+                        </Link>
                     </li>
                     <li>
-                        <a href="#contact" className="block hover:text-gray-300">
-                            Contact
-                        </a>
+                        <Link to="/vlogs" className="hover:text-gray-300">
+                            Vlogs
+                        </Link>
                     </li>
                 </ul>
             )}
