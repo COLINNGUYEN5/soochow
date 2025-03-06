@@ -1,15 +1,21 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import Collab from "./Collab.tsx";
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="w-screen bg-black text-white p-4 shadow-md">
+        <nav className="w-screen bg-black text-white px-4 py-1 shadow-md">
             <div className="mx-auto flex justify-between items-center">
-                <Link to="/" className="text-xl font-bold">
-                    Waishuangxi Watershed Area
-                </Link>
+                <div className="flex items-center gap-x-3">
+                    <Link to="/" className="text-xl font-bold">
+                        Waishuangxi Watershed Area
+                    </Link>
+                    <div className="hidden md:flex">
+                        <Collab/>
+                    </div>
+                </div>
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-4">
                     <li>
@@ -52,23 +58,28 @@ const Navbar: React.FC = () => {
             </div>
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <ul className="md:hidden flex flex-col gap-2 mt-2 bg-black p-4 rounded shadow-md">
-                    <li>
-                        <Link to="/about" className="block hover:text-gray-300">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/location" className="block hover:text-gray-300">
-                            Location
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/vlogs" className="hover:text-gray-300">
-                            Vlogs
-                        </Link>
-                    </li>
-                </ul>
+                <div className="md:hidden flex flex-col gap-2 mt-2 bg-black p-4 rounded shadow-md">
+                    <ul>
+                        <li>
+                            <Link to="/about" className="block hover:text-gray-300">
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/location" className="block hover:text-gray-300">
+                                Location
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/vlogs" className="hover:text-gray-300">
+                                Vlogs
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className="mt-4 flex justify-center">
+                        <Collab />
+                    </div>
+                </div>
             )}
         </nav>
     );
