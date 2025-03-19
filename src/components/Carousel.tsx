@@ -3,7 +3,6 @@ import "swiper/css"; // Import Swiper styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { Typography } from "@material-tailwind/react";
 import {Link} from "react-router-dom";
 
 export function CarouselWithContent() {
@@ -26,9 +25,9 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid place-items-center bg-black/75">
-                            <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
                                 Waishuangxi
-                            </Typography>
+                            </p>
                         </div>
                     </div>
                 </Link>
@@ -44,9 +43,9 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl">
+                            <p className="text-white text-3xl md:text-4xl lg:text-5xl">
                                 National Palace Museum
-                            </Typography>
+                            </p>
                         </div>
                     </div>
                 </Link>
@@ -62,9 +61,9 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
                                 Chiang Kai-Shek Shilin Residence
-                            </Typography>
+                            </p>
                         </div>
                     </div>
                 </Link>
@@ -80,9 +79,9 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <Typography variant="h1" color="white" className="text-3xl md:text-4xl lg:text-5xl">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
                                 Shilin Night Market
-                            </Typography>
+                            </p>
                         </div>
                     </div>
                 </Link>
