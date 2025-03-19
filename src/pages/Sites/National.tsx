@@ -1,5 +1,3 @@
-import {Card, CardBody, CardHeader, Typography} from "@material-tailwind/react";
-
 export default function National() {
     return (
         <div className="overflow-auto">
@@ -12,33 +10,29 @@ export default function National() {
                 <h1 className="text-6xl font-bold">National Palace Museum (國立故宮博物院)</h1>
 
                 <div className="flex flex-col md:flex-row gap-x-48">
-                    <Card className="w-124 h-fit place-self-center">
-                        <CardHeader floated={false} className="h-84">
-                            <img src="/national-map.png" alt="profile-picture" className="h-full w-full object-cover"/>
-                        </CardHeader>
-                        <CardBody className="text-center py-2">
-                            <Typography variant="h4" color="blue-gray" className="mb-2">
+                    <div className="w-124 h-fit place-self-center">
+                        <img src="/national-map.png" alt="profile-picture" className="h-84 w-full object-cover"/>
+                        <div className="text-center py-2 bg-white shadow-md">
+                            <p className="mb-2">
                                 Dr. Mi Chienkuo
-                            </Typography>
-                            <Typography color="blue-gray" className="font-medium" textGradient>
+                            </p>
+                            <p className="font-medium">
                                 Dean of the School of Liberal Arts and Social Sciences
-                            </Typography>
-                        </CardBody>
-                    </Card>
+                            </p>
+                        </div>
+                    </div>
 
-                    <Card className="w-124 h-fit place-self-center">
-                        <CardHeader floated={false} className="h-84">
-                            <img src="/national.jpg" alt="national-picture" className="h-full w-full object-cover"/>
-                        </CardHeader>
-                        <CardBody className="text-center py-2">
-                            <Typography variant="h4" color="blue-gray" className="mb-2">
+                    <div className="w-124 h-fit place-self-center">
+                        <img src="/national.jpg" alt="national-picture" className="h-84 w-full object-cover"/>
+                        <div className="text-center py-2 bg-white shadow-md">
+                            <p className="mb-2">
                                 Dr. Mi Chienkuo
-                            </Typography>
-                            <Typography color="blue-gray" className="font-medium" textGradient>
+                            </p>
+                            <p className="font-medium">
                                 Dean of the School of Liberal Arts and Social Sciences
-                            </Typography>
-                        </CardBody>
-                    </Card>
+                            </p>
+                        </div>
+                    </div>
 
 
                 </div>

@@ -1,68 +1,53 @@
-import {
-    Card,
-    CardHeader,
-    CardBody,
-    Typography,
-} from "@material-tailwind/react";
-
 export function TeamCard() {
     return (
         <div className="flex flex-col md:flex-row justify-center gap-12">
-            <Card className="w-72 h-fit place-self-center">
-                <CardHeader floated={false}>
-                    <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-                </CardHeader>
-                <CardBody className="text-center py-2">
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
+            <div className="w-72 h-fit place-self-center">
+                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <div className="text-center py-2 bg-white shadow-md">
+                    <p className="mb-2">
                         Colin Nguyen
-                    </Typography>
-                    <Typography color="blue-gray" className="font-medium" textGradient>
+                    </p>
+                    <p className="blue-gray font-medium">
                         Computer Science
-                    </Typography>
-                </CardBody>
-            </Card>
+                    </p>
+                </div>
+            </div>
 
-            <Card className="w-72 h-fit place-self-center">
-                <CardHeader floated={false}>
-                    <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-                </CardHeader>
-                <CardBody className="text-center py-2">
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
+            <div className="w-72 h-fit place-self-center">
+                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <div className="text-center py-2 bg-white shadow-md">
+                    <p className="mb-2">
                         Kaven Lin
-                    </Typography>
-                    <Typography color="blue-gray" className="font-medium" textGradient>
+                    </p>
+                    <p className="font-medium blue-gray">
                         Management Engineering
-                    </Typography>
-                </CardBody>
-            </Card>
+                    </p>
+                </div>
+            </div>
 
-            <Card className="w-72 h-fit place-self-center">
-                <CardHeader floated={false}>
-                    <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-                </CardHeader>
-                <CardBody className="text-center py-2">
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
+            <div className="w-72 h-fit place-self-center">
+                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <div className="bg-white text-center py-2 shadow-md">
+                    <p className="mb-2">
                         Sean Okamoto
-                    </Typography>
-                    <Typography color="blue-gray" className="font-medium" textGradient>
+                    </p>
+                    <p className="blue-gray font-medium">
                         Aerospace Engineer
-                    </Typography>
-                </CardBody>
-            </Card>
+                    </p>
+                </div>
+            </div>
 
-            <Card className="w-72 h-fit place-self-center">
-                <CardHeader floated={false}>
-                    <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-                </CardHeader>
-                <CardBody className="text-center py-2">
-                    <Typography variant="h4" color="blue-gray" className="mb-2">
+            <div className="w-72 h-fit place-self-center">
+                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <div className="text-center py-2 bg-white shadow-md">
+                    <p className="mb-2">
                         Aishwarya Sinha
-                    </Typography>
-                    <Typography color="blue-gray" className="font-medium" textGradient>
+                    </p>
+                    <p className="font-medium blue-gray">
                         Data Science
-                    </Typography>
-                </CardBody>
-            </Card>
+                    </p>
+                </div>
+            </div>
 
         </div>
     );
