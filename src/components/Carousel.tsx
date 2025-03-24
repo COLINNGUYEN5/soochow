@@ -1,7 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css"; // Import Swiper styles
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {Link} from "react-router-dom";
 
@@ -25,7 +22,7 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
                                 Waishuangxi
                             </p>
                         </div>
@@ -43,7 +40,7 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-white text-3xl md:text-4xl lg:text-5xl">
+                            <p className="text-white text-3xl md:text-4xl lg:text-5xl font-quintessential">
                                 National Palace Museum
                             </p>
                         </div>
@@ -61,7 +58,7 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
                                 Chiang Kai-Shek Shilin Residence
                             </p>
                         </div>
@@ -79,7 +76,7 @@ export function CarouselWithContent() {
                             className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white">
+                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
                                 Shilin Night Market
                             </p>
                         </div>

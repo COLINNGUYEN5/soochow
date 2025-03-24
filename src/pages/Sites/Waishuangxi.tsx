@@ -12,7 +12,7 @@ export default function Waishuangxi() {
                 <div className="flex flex-col md:flex-row gap-x-48">
                     <div className="w-124 h-fit place-self-center">
                         <img src="/waishuangxi-map.jpg" alt="profile-picture" className="h-84 w-full object-cover"/>
-                        <div className="text-center py-2">
+                        <div className="text-center py-2 bg-white shadow-md">
                             <p className="mb-2">
                                 Dr. Mi Chienkuo
                             </p>
@@ -21,10 +21,9 @@ export default function Waishuangxi() {
                             </p>
                         </div>
                     </div>
-
                     <div className="w-124 h-fit place-self-center">
                         <img src="/waishuangxi.jpg" alt="profile-picture" className="h-84 w-full object-cover"/>
-                        <div className="text-center py-2">
+                        <div className="text-center py-2 bg-white shadow-md">
                             <p className="mb-2">
                                 Dr. Mi Chienkuo
                             </p>
@@ -33,9 +32,10 @@ export default function Waishuangxi() {
                             </p>
                         </div>
                     </div>
-
-
                 </div>
+                <p>
+                    TestTestTestTestTestTestTestTestTestTest
+                </p>
             </div>
         </div>
     )
