@@ -14,7 +14,7 @@ export function LocationCards() {
                         />
                     </div>
                     <div className="p-4">
-                        <p className="mb-2">
+                        <p className="font-bold text-xl mb-2">
                             Waishuangxi
                         </p>
                         <p>
@@ -38,13 +38,13 @@ export function LocationCards() {
                         />
                     </div>
                     <div className="p-4">
-                        <p className="mb-2">
-                            National Palace of Museum
+                        <p className="font-bold text-xl mb-2">
+                            National Palace Museum
                         </p>
                         <p>
-                            The place is close to Barceloneta Beach and bus stop just 2 min by
-                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
-                            night life in Barcelona.
+                            Originally opened in Beijing 1925, and then moved to Taiwan in 1948 due to the Chinese
+                            Civil War, this museum contains over 700,000 artifacts. The treasury is now primarily composed of pieces from the imperial collection,
+                            showcasing art from various dynasties.
                         </p>
                     </div>
                     <div className="p-2">
@@ -63,7 +63,7 @@ export function LocationCards() {
                         />
                     </div>
                     <div className="p-4">
-                        <p className="mb-2">
+                        <p className="font-bold text-xl mb-2">
                             Chiang Kai-Shek Shilin Residence
                         </p>
                         <p>
@@ -88,7 +88,7 @@ export function LocationCards() {
                             />
                         </div>
                         <div className="p-4">
-                            <p className="mb-2">
+                            <p className="font-bold text-xl mb-2">
                                 Shilin Night Market
                             </p>
                             <p>

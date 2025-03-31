@@ -115,15 +115,7 @@ export default function National() {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center h-screen py-10 gap-y-10"
-                style={{
-                    width: '40%',
-                    height: 'auto',
-                    aspectRatio: '4/3',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    margin: '0 auto'
-                }}>
+            <div className="flex justify-center items-center w-[40%] h-auto aspect-4/3 mx-auto">
                 <Canvas camera={{ position: [0, 0.4, 0.5], fov: 90 }} style={{ background: "black" }}>
                     <directionalLight position={[0, 2, 1]} intensity={1} />
                     <ambientLight color={0xfcfcfc} intensity={0.3} />
