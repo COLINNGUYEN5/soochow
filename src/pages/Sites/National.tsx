@@ -1,5 +1,5 @@
 import { Canvas, useLoader, useFrame } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Mesh } from 'three'
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
 import { MTLLoader } from 'three/addons/loaders/MTLLoader.js'
@@ -10,7 +10,7 @@ function Box(props: any) {
     const [hovered, setHover] = React.useState(false)
     const [active, setActive] = React.useState(false)
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         if (meshRef.current) {
             if (!hovered) {
                 meshRef.current.rotation.y += delta
@@ -23,9 +23,9 @@ function Box(props: any) {
             {...props}
             ref={meshRef}
             scale={active ? 1.5 : 1}
-            onClick={(event) => setActive(!active)}
-            onPointerOver={(event) => setHover(true)}
-            onPointerOut={(event) => setHover(false)} >
+            onClick={() => setActive(!active)}
+            onPointerOver={() => setHover(true)}
+            onPointerOut={() => setHover(false)} >
             <boxGeometry args={[1, 1, 1]} />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
         </mesh>
@@ -60,7 +60,7 @@ function ElephantModel() {
     // Animation
     const elephantRef = React.useRef<Mesh>(null)
 
-    useFrame((state, delta) => {
+    useFrame((_state, delta) => {
         if (elephantRef.current) {
             if (elephantRef)
                 elephantRef.current.rotation.y += delta * 0.1
