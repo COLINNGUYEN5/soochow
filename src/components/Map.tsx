@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {Canvas, useThree} from "@react-three/fiber";
 import {useGLTF} from "@react-three/drei";
 import {XYPanControls} from "./XYPanControls.tsx";
@@ -14,12 +14,6 @@ function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
 }
 
 export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) {
-    const [imgSrc, setImgSrc] = useState<string | null>(null);
-
-    useEffect(() => {
-        setImgSrc("/trial.png");
-    }, []);
-
     const handleImageLoad = () => {
         // Force spinner to show for at least 400ms
         setTimeout(() => {
@@ -40,7 +34,6 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
     return (
         <div className="w-full h-full relative overflow-hidden">
                     <div className="relative w-full h-full">
-                        {imgSrc && (
                             <Canvas style={{ background: "black" }}>
                                 <directionalLight position={[0, 2, 1]} intensity={1} />
                                 <ambientLight color={0xfcfcfc} intensity={0.5} />
@@ -48,7 +41,6 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
                                 <XYPanControls />
                                 <CameraController />
                             </Canvas>
-                        )}
                         <Link to={"/sites/national"}>
                             <div
                                 className="absolute top-[37%] left-[62%] w-[3%] z-30 cursor-pointer group">

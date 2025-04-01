@@ -32,19 +32,6 @@ export function XYPanControls() {
         controls.screenSpacePanning = false;
     }, [camera]);
 
-    // ✅ Clamp camera and target every frame
-    // useFrame(() => {
-    //     const cam = camera.position;
-    //     const tgt = controlsRef.current.target;
-    //
-    //     cam.x = Math.min(BOUNDS.maxX, Math.max(BOUNDS.minX, cam.x));
-    //     cam.z = Math.min(BOUNDS.maxZ, Math.max(BOUNDS.minZ, cam.z));
-    //     tgt.x = Math.min(BOUNDS.maxX, Math.max(BOUNDS.minX, tgt.x));
-    //     tgt.z = Math.min(BOUNDS.maxZ, Math.max(BOUNDS.minZ, tgt.z));
-    //
-    //     controlsRef.current.update();
-    // });
-
     useFrame(() => {
         const controls = controlsRef.current;
         if (!controls || !offsetRef.current) return;
