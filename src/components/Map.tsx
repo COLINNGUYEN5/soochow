@@ -1,24 +1,54 @@
 import { Link } from "react-router-dom";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import React, {useEffect, useState} from "react";
+import {Canvas, useThree} from "@react-three/fiber";
+import {useGLTF} from "@react-three/drei";
+import {XYPanControls} from "./XYPanControls.tsx";
 
-export function Map(){
+function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
+    const { scene } = useGLTF('/models/WSXMap.glb', true); // the second param enables preloading
+    useEffect(() => {
+        // GLTF has loaded, notify parent
+        onLoadComplete();
+    }, [onLoadComplete]);
+    return <primitive object={scene} />;
+}
+
+export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) {
+    const [imgSrc, setImgSrc] = useState<string | null>(null);
+
+    useEffect(() => {
+        setImgSrc("/trial.png");
+    }, []);
+
+    const handleImageLoad = () => {
+        // Force spinner to show for at least 400ms
+        setTimeout(() => {
+            setLoading(false);
+        }, 400);
+    };
+
+    function CameraController() {
+        const { camera } = useThree();
+
+        useEffect(() => {
+            camera.lookAt(60, 0, 20); // 👀 Make the camera look at the origin
+        }, [camera]);
+
+        return null;
+    }
 
     return (
-        <div className="w-full h-full relative">
-            <TransformWrapper
-                initialScale={1.5}
-                minScale={1}
-                maxScale={4}
-                wheel={{ step: 50 }}
-                doubleClick={{ disabled: false }}
-                pinch={{ disabled: false }}
-            >
-                <TransformComponent
-                    wrapperStyle={{ width: "100%", height: "100%" }}
-                    contentClass="relative w-full h-full"
-                >
-                    <div className="relative w-[1600px] aspect-[16/9]">
-                        <img src="/map-2.png" alt="Geography map of Waishuangxi" className="w-full h-full"/>
+        <div className="w-full h-full relative overflow-hidden">
+                    <div className="relative w-full h-full">
+                        {imgSrc && (
+                            <Canvas style={{ background: "black" }}>
+                                <directionalLight position={[0, 2, 1]} intensity={1} />
+                                <ambientLight color={0xfcfcfc} intensity={0.5} />
+                                <MapModel onLoadComplete={handleImageLoad}/>
+                                <XYPanControls />
+                                <CameraController />
+                            </Canvas>
+                        )}
                         <Link to={"/sites/national"}>
                             <div
                                 className="absolute top-[37%] left-[62%] w-[3%] z-30 cursor-pointer group">
@@ -47,10 +77,7 @@ export function Map(){
                                 </div>
                             </div>
                         </Link>
-
                     </div>
-                </TransformComponent>
-            </TransformWrapper>
         </div>
     )
 }
