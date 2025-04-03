@@ -1,10 +1,10 @@
 import { OrbitControls } from '@react-three/drei';
 import { useThree, useFrame } from '@react-three/fiber';
 import { useEffect, useRef } from 'react';
-import { MOUSE } from 'three';
+import { Vector3, MOUSE } from 'three';
 
 export function XYPanControls() {
-    const controlsRef = useRef<any>();
+    const controlsRef = useRef<any>(null);
     const { camera, gl } = useThree();
 
     const BOUNDS = {
@@ -14,7 +14,7 @@ export function XYPanControls() {
         maxZ: 100,
     };
 
-    const offsetRef = useRef<THREE.Vector3 | null>(null);
+    const offsetRef = useRef<Vector3 | null>(null);
 
     useEffect(() => {
         const controls = controlsRef.current;
@@ -52,7 +52,6 @@ export function XYPanControls() {
     return (
         <OrbitControls
             ref={controlsRef}
-            args={[camera, gl.domElement]}
             enableRotate={false}
             enableZoom={true}
             mouseButtons={{
