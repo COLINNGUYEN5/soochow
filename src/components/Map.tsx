@@ -36,15 +36,16 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
     return (
         <div className="w-full h-full relative overflow-hidden">
                     <div className="relative w-full h-full">
-                            <Canvas style={{ background: "black" }}>
+                        <Suspense fallback={<div className="text-white">Loading 3D Model...</div>}>
+                        <Canvas style={{ background: "black" }}>
                                 <directionalLight position={[0, 2, 1]} intensity={1} />
                                 <ambientLight color={0xfcfcfc} intensity={0.5} />
-                                <Suspense fallback={<div className="text-white">Loading 3D Model...</div>}>
                                     <MapModel onLoadComplete={handleImageLoad}/>
-                                </Suspense>
                                 <XYPanControls />
                                 <CameraController />
-                            </Canvas>
+                        </Canvas>
+                        </Suspense>
+
                         <Link to={"/sites/national"}>
                             <div
                                 className="absolute top-[37%] left-[62%] w-[3%] z-30 cursor-pointer group">
