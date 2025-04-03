@@ -39,7 +39,7 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
                             <Canvas style={{ background: "black" }}>
                                 <directionalLight position={[0, 2, 1]} intensity={1} />
                                 <ambientLight color={0xfcfcfc} intensity={0.5} />
-                                <Suspense fallback={null}>
+                                <Suspense fallback={<div className="text-white">Loading 3D Model...</div>}>
                                     <MapModel onLoadComplete={handleImageLoad}/>
                                 </Suspense>
                                 <XYPanControls />
