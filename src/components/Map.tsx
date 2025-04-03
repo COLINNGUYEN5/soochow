@@ -9,7 +9,7 @@ import { Suspense } from "react";
 function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
     const { scene } = useGLTF('/models/WSXMap.glb', true); // the second param enables preloading
     useEffect(() => {
-        // GLTF has loaded, notify parent
+        console.log("✅ GLB loaded");
         onLoadComplete();
     }, [onLoadComplete]);
     return <primitive object={scene} />;
