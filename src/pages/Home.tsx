@@ -2,6 +2,7 @@ import {CarouselWithContent} from "../components/Carousel.tsx";
 import {Map} from "../components/Map.tsx";
 import {useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
+
 export default function Home() {
     const [isMap, setMap] = useState(true);
     const [isClicked, setClicked] = useState(true);
