@@ -15,8 +15,6 @@ export function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
     return <primitive object={scene} />;
 }
 
-useGLTF.preload('/models/WSXMap.glb');
-
 
 export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) {
     const handleImageLoad = () => {
