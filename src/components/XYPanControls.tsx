@@ -5,7 +5,7 @@ import { Vector3, MOUSE } from 'three';
 
 export function XYPanControls() {
     const controlsRef = useRef<any>(null);
-    const { camera, gl } = useThree();
+    const { camera } = useThree();
 
     const BOUNDS = {
         minX: 40,
