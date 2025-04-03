@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {Canvas, useLoader, useThree} from "@react-three/fiber";
 // import {useGLTF} from "@react-three/drei";
 import {XYPanControls} from "./XYPanControls.tsx";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 
 function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
     const gltf = useLoader(GLTFLoader, '/models/WSXMap.glb');
