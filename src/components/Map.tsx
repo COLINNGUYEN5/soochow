@@ -3,8 +3,6 @@ import {useEffect} from "react";
 import {Canvas, useThree} from "@react-three/fiber";
 import {useGLTF} from "@react-three/drei";
 import {XYPanControls} from "./XYPanControls.tsx";
-import { Suspense } from "react";
-
 
 function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
     const { scene } = useGLTF('/models/WSXMap.glb', true); // the second param enables preloading
@@ -36,16 +34,13 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
     return (
         <div className="w-full h-full relative overflow-hidden">
                     <div className="relative w-full h-full">
-                        <Suspense fallback={<div className="text-white">Loading 3D Model...</div>}>
                         <Canvas style={{ background: "black" }}>
-                                <directionalLight position={[0, 2, 1]} intensity={1} />
-                                <ambientLight color={0xfcfcfc} intensity={0.5} />
-                                    <MapModel onLoadComplete={handleImageLoad}/>
-                                <XYPanControls />
-                                <CameraController />
+                            <directionalLight position={[0, 2, 1]} intensity={1} />
+                            <ambientLight color={0xfcfcfc} intensity={0.5} />
+                            <MapModel onLoadComplete={handleImageLoad}/>
+                            <XYPanControls />
+                            <CameraController />
                         </Canvas>
-                        </Suspense>
-
                         <Link to={"/sites/national"}>
                             <div
                                 className="absolute top-[37%] left-[62%] w-[3%] z-30 cursor-pointer group">
