@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 import {useEffect} from "react";
-import {Canvas, useThree} from "@react-three/fiber";
-import {useGLTF} from "@react-three/drei";
+import {Canvas, useLoader, useThree} from "@react-three/fiber";
+// import {useGLTF} from "@react-three/drei";
 import {XYPanControls} from "./XYPanControls.tsx";
+import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
 
 function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
-    const { scene } = useGLTF('/models/WSXMap.glb', true); // the second param enables preloading
+    const gltf = useLoader(GLTFLoader, '/models/WSXMap.glb');
+
     useEffect(() => {
         console.log("✅ GLB loaded");
         onLoadComplete();
     }, [onLoadComplete]);
-    return <primitive object={scene} />;
+
+    return <primitive object={gltf.scene} />;
 }
 
 export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) {
