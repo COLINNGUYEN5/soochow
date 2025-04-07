@@ -8,6 +8,9 @@ import National from "./pages/Sites/National.tsx";
 import Chiang from "./pages/Sites/Chiang.tsx";
 import Vlogs from "./pages/Vlogs.tsx";
 import Shilin from "./pages/Sites/Shilin.tsx";
+import Soka from "./pages/Sites/Soka.tsx";
+import Shuangxi from "./pages/Sites/Shuangxi.tsx";
+import Fuyu from "./pages/Sites/Fuyu.tsx";
 
 function App() {
     return (
@@ -22,6 +25,11 @@ function App() {
                     <Route path="/sites/national" element={<National />} />
                     <Route path="/sites/chiang" element={<Chiang />} />
                     <Route path="/sites/shilin" element={<Shilin />} />
+                    <Route path="/sites/soka" element={<Soka />} />
+                    <Route path="/sites/shuangxi" element={<Shuangxi />} />
+                    <Route path="/sites/fuyu" element={<Fuyu />} />
+
+
                 </Routes>
         </div>
     );

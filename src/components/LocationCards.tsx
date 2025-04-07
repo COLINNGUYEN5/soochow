@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 export function LocationCards() {
     return (
-        <div className="overflow-auto flex flex-col text-center my-10">
+        <div className="overflow-auto flex flex-col text-center my-10 mx-4">
             <label className="text-6xl font-bold">Locations</label>
             <div className="flex flex-wrap justify-center gap-12 my-5">
                 <div className="mt-6 w-96 bg-white shadow-md">
@@ -103,6 +103,82 @@ export function LocationCards() {
                             </Link>
                         </div>
                     </div>
+
+                <div className="mt-6 w-96 bg-white shadow-md">
+                    <div className="relative h-56">
+                        <img
+                            src="/fuyu-front.jpg"
+                            alt="card-image"
+                            className={"w-full h-full object-cover"}
+                        />
+                    </div>
+                    <div className="p-4">
+                        <p className="font-bold text-xl mb-2">
+                            Fuyu Tea House
+                        </p>
+                        <p>
+                            The place is close to Barceloneta Beach and bus stop just 2 min by
+                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
+                            night life in Barcelona.
+                        </p>
+                    </div>
+                    <div className="p-2">
+                        <Link to={"/sites/fuyu"}>
+                            <button className="bg-black p-2 rounded-lg text-white cursor-pointer">Read More</button>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="mt-6 w-96 bg-white shadow-md">
+                    <div className="relative h-56">
+                        <img
+                            src="/shuangxi/shuangxi-front.jpg"
+                            alt="card-image"
+                            className={"w-full h-full object-cover"}
+                        />
+                    </div>
+                    <div className="p-4">
+                        <p className="font-bold text-xl mb-2">
+                            Shuangxi Park
+                        </p>
+                        <p>
+                            The place is close to Barceloneta Beach and bus stop just 2 min by
+                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
+                            night life in Barcelona.
+                        </p>
+                    </div>
+                    <div className="p-2">
+                        <Link to={"/sites/shuangxi"}>
+                            <button className="bg-black p-2 rounded-lg text-white cursor-pointer">Read More</button>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="mt-6 w-96 bg-white shadow-md">
+                    <div className="relative h-56">
+                        <img
+                            src="/soka-front.jpg"
+                            alt="card-image"
+                            className={"w-full h-full object-cover"}
+                        />
+                    </div>
+                    <div className="p-4">
+                        <p className="font-bold text-xl mb-2">
+                            Soka Art Museum
+                        </p>
+                        <p>
+                            The place is close to Barceloneta Beach and bus stop just 2 min by
+                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
+                            night life in Barcelona.
+                        </p>
+                    </div>
+                    <div className="p-2">
+                        <Link to={"/sites/soka"}>
+                            <button className="bg-black p-2 rounded-lg text-white cursor-pointer">Read More</button>
+                        </Link>
+                    </div>
+                </div>
+
             </div>
         </div>
     );

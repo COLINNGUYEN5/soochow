@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import {useEffect} from "react";
 import {Canvas, useThree} from "@react-three/fiber";
 import {useGLTF} from "@react-three/drei";
 import {XYPanControls} from "./XYPanControls.tsx";
+import {NationalPin} from "./NationalPin.tsx";
+import {ShilinPin} from "./ShilinPin.tsx";
+import {SokaPin} from "./SokaPin.tsx";
+import {ShuangxiPin} from "./ShuangxiPin.tsx";
+import {MapPin} from "./MapPin.tsx";
+
 
 export function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
     const { scene } = useGLTF('/models/WSXMap.glb');
@@ -12,7 +17,26 @@ export function MapModel({ onLoadComplete }: { onLoadComplete: () => void }) {
         onLoadComplete();
     }, [onLoadComplete]);
 
-    return <primitive object={scene} />;
+    return  <group>
+        <primitive object={scene} />
+        <MapPin
+            textureUrl="/fuyu-pin.png"
+            position={[33, 2.3, 74.5]}
+            label="Fuyu Tea House"
+            route="/sites/fuyu"
+        />
+        <MapPin
+            textureUrl="/national-logo.png"
+            position={[59, 2.3, 69.5]}
+            label="National Palace Museum"
+            route="/sites/national"
+        />
+
+        <NationalPin />
+        <ShilinPin />
+        <SokaPin />
+        <ShuangxiPin />
+    </group>;
 }
 
 
@@ -44,34 +68,6 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
                             <XYPanControls />
                             <CameraController />
                         </Canvas>
-                        <Link to={"/sites/national"}>
-                            <div
-                                className="absolute top-[37%] left-[62%] w-[3%] z-30 cursor-pointer group">
-                                <img
-                                    src="/national-logo.png"
-                                    alt="National Palace Museum"
-                                    className="group-hover:scale-120 transition-transform duration-200"/>
-                                <div
-                                    className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                    National Palace Museum
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45"></div>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={"/sites/shilin"}>
-                            <div
-                                className="absolute top-[75%] left-[28%] w-[3%] z-30 cursor-pointer group">
-                                <img
-                                    src="/shilin-logo.png"
-                                    alt="Shilin Night Market"
-                                    className="group-hover:scale-120 transition-transform duration-200"/>
-                                <div
-                                    className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                    Shilin Night Market
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45"></div>
-                                </div>
-                            </div>
-                        </Link>
                     </div>
         </div>
     )
