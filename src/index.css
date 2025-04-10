@@ -1,10 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap');
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
 
+
 @theme {
     --font-quintessential: "Quintessential", sans-serif;
+    --font-poiret: "Poiret One", sans-serif;
+    --font-newsreader: "Newsreader", sans-serif;
+
+}
+
+@font-face {
+    font-family: 'EngraversMT';
+    src: url('/font/engravers-mt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-engravers {
+    font-family: 'EngraversMT', serif;
 }

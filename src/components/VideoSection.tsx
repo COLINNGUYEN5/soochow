@@ -106,8 +106,6 @@ export default function VideoSection() {
                     </div>
                 </li>
             </ol>
-
-
         </div>
     );
 }

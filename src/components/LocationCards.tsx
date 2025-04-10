@@ -107,7 +107,7 @@ export function LocationCards() {
                 <div className="mt-6 w-96 bg-white shadow-md">
                     <div className="relative h-56">
                         <img
-                            src="/fuyu-front.jpg"
+                            src="/fuyu/tea.jpg"
                             alt="card-image"
                             className={"w-full h-full object-cover"}
                         />
@@ -117,9 +117,8 @@ export function LocationCards() {
                             Fuyu Tea House
                         </p>
                         <p>
-                            The place is close to Barceloneta Beach and bus stop just 2 min by
-                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
-                            night life in Barcelona.
+                            Fuyu Tea House is a multi-generational family-owned tea house north of the Shilin MRT station. The tea house is nestled onto a small street next to the main road. They have two locations, one in Shilin, and another one in Taipei.
+
                         </p>
                     </div>
                     <div className="p-2">
@@ -142,9 +141,8 @@ export function LocationCards() {
                             Shuangxi Park
                         </p>
                         <p>
-                            The place is close to Barceloneta Beach and bus stop just 2 min by
-                            walk and near to &quot;Naviglio&quot; where you can enjoy the main
-                            night life in Barcelona.
+                            Shuangxi Park is a microcosm of traditional Chinese culture and it serves different purposes for everyone. For local residents, the park’s flora and fauna provide a place of relaxation, recreation, and more, like filming.
+
                         </p>
                     </div>
                     <div className="p-2">
