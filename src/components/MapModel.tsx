@@ -63,7 +63,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
                 textureUrl="/pins/zhishanyan-pin.png"
                 position={[41, 2.3, 68]}
                 label="Zhishanyan"
-                route="/sites/shuangxi"
+                route="/sites/zhishanyan"
                 onSelect={onPinSelect}
             />
             <MapPin
@@ -74,6 +74,12 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
                 width={2}
                 height={2}
                 hoverScale={4}
+            />
+            <MapPin
+                textureUrl="/pins/soochow.png"
+                position={[56, 2.3, 77]}
+                label="Soochow University" route="/sites/shuangxi"
+                onSelect={onPinSelect}
             />
         </group>
     );

@@ -1,7 +1,8 @@
-import {CarouselWithContent} from "../components/Carousel.tsx";
-import {Map} from "../components/Map.tsx";
-import {useState} from "react";
-import {AnimatePresence, motion} from "framer-motion";
+import { useState, lazy } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const CarouselWithContent = lazy(() => import("../components/Carousel"));
+const Map = lazy(() => import("../components/Map"));
 
 export default function Home() {
     const [isMap, setMap] = useState(true);
@@ -10,7 +11,7 @@ export default function Home() {
 
     return (
         <div className="relative h-full w-full overflow-hidden">
-                <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait">
                     {isMap ? (
                         <motion.div
                             key="map"
@@ -23,7 +24,7 @@ export default function Home() {
                             <div className="relative w-full h-full">
                                 {loading && (
                                     <div className="absolute inset-0 flex items-center justify-center bg-black/75 z-50">
-                                            <div className="fixed top-0 left-0 right-0 bottom-0 flex place-self-center animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-gray-500" />
+                                        <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-gray-500" />
                                     </div>
                                 )}
                                 <Map setLoading={setLoading} />
@@ -36,7 +37,8 @@ export default function Home() {
                                 {isClicked && (
                                     <div
                                         className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black/75 cursor-pointer"
-                                        onClick={() => setClicked(false)}>
+                                        onClick={() => setClicked(false)}
+                                    >
                                         <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential tracking-[.35em]">
                                             EXPLORE WAISHUANGXI
                                         </p>
@@ -64,7 +66,7 @@ export default function Home() {
                             </div>
                         </motion.div>
                     )}
-                </AnimatePresence>
+            </AnimatePresence>
         </div>
     );
 }

@@ -30,77 +30,73 @@ export default function Soka() {
                 <div className="flex flex-col w-fit">
                     <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200">Soka Art Museum</h1>
                     <div className="mb-6">
-                        <figure className="w-[50%] float-left mr-10">
+                        <figure className="w-[50%] float-left mr-10 mb-5">
                             <img
-                                src="/shuangxi/shuangxi-front.jpg"
+                                src="/soka/soka-front.jpg"
                                 alt="Shuangix Park Front Grate"
                                 className="w-full h-auto mr-6 mb-4 object-cover rounded-lg"
                             />
                             <figcaption className="text-sm text-center text-gray-600">
-                                Shuangxi Park Entrance Gate, photographed March 24
+                                Front of the Soka Art Museum, photographed April 2
                             </figcaption>
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園).
-                                Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as a tranquil, nature-filled haven in the middle of the city.
+                                Our team dedicated a morning exploring the Soka Art Museum, which is a small, peaceful,
+                                and well-curated art exhibition tucked just across the street from the National Palace Museum.
+                                Unlike the grand scale of the National Palace Museum, the Soka Art Museum is an uncrowded space where we could see only one exhibit.
+                                In fact, the art center only occupies two floors of the Soka Art Museum and even offers free admission.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Our team discovered that the director of the Yangmingshan Administration Bureau, Pan Qiwu, originally constructed the park for Chiang Kai-Shek’s birthday.
-                                Opening in 1972, the park today features elements of traditional Chinese gardens, like pavilions, zig-zag bridges, waterfalls, and an artificial hill.
-                                It also is named after the merging of two rivers— Jingquexi and Neishuangxi— into Waishuangxi (outer twin-river).
+                                During our visit, the featured exhibition showcased the work of Taiwanese and Buddhist artist Hsiao Chin,
+                                who is well known for his abstract style. Today, his artwork is showcased in many places throughout the world including the Metropolitan Museum of Art (New York),
+                                M+ Museum (Hong Kong), Musée Guimet (Paris), and many more.
+
                             </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                At the entrance of the park stands a large gate with engravings of the park’s title. As we entered the gate, we came across a Chinese Banyan tree, which was very well-maintained much like the other plants in the park.
-                            </p>
-                            <figure className="w-[45%] float-right ml-15">
+                            <figure className="w-[45%] float-right ml-15 mb-5 mt-5">
                                 <img
-                                    src="/shuangxi/tree.JPG"
-                                    alt="Lily Pads picture"
+                                    src="/soka/painting.jpg"
+                                    alt="Hsiao Chin's Artwork"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Giant Lily Pads, photographed by Josh Ellis, 2017
+                                    Hsiao Chin's Artwork, photographed April 2
                                 </figcaption>
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                The park has a large variety of plant life throughout the seasons, including pine and palm trees, wisteria, and cherry blossoms.
-                                Walking around, we noticed palm trees and lemon-scented gum trees. We also saw turtles bathing in the sun and swimming, butterflies dancing around the plants, and many different kinds of fish and birds.
+                                As we wandered through the two floors, we noticed that this space encouraged a slower and more reflective approach than a typical museum.
+                                Every room in the exhibit featured minimal light with black walls surrounding the area, with only the artworks having a very specific amount of light shining on it.
+                                This intentional setup left us with a sense of thoughtfulness, as we slowly analyzed each art piece.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                In addition, we found out that in 2013 and 2014, then again in 2017, the Taipei City Government filled the man-made pond in the park with giant lily pads,
-                                native to South America, in order to attract more tourism to the site. The park returned to be generally uncrowded once the lily pads were gone.
+                                After sitting down to talk to 4 members of the Soka Gakkai, the group discovered that the remainder of the building is occupied by the cultural headquarters of the Taiwan Soka Association,
+                                which is a branch of the Soka Gakkai and is a part of a series of 11 art centers. The Soka Gakkai is a religious international organization founded on Nichiren Daishonin’s Buddhism that promotes peace,
+                                culture and education. Their mission is to “create the highest value of life.” In Taiwan, the organization has been recognized extensively for its cultural and educational contributions,
+                                receiving awards like the Executive Yuan Award the the Ministry of Culture’s Wenxin Award.
                             </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                Towards the center of the park, we came across a group of people— one of which was wearing hanfu— filming a scene reminiscent of historic wuxia.
-                                We also noticed elderly people taking a light stroll through the park and relaxing on the benches.
-                            </p>
-                            <figure className="w-[50%] float-left mt-10 mr-15">
+                            <figure className="w-[50%] float-left mr-15 mt-5">
                                 <img
-                                    src="/shuangxi/lily.jpg"
-                                    alt="Shuangix Park Lily Pads"
+                                    src="/soka/team.jpg"
+                                    alt="Team & Soka Members"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Chinese Banyan Tree at Shuangxi Park Entrance, photographed March 24
+                                    Team & Soka Members, photographed April 2
                                 </figcaption>
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Shuangxi Park is a microcosm of traditional Chinese culture and it serves different purposes for everyone. For local residents, the park’s flora and fauna provide a place of relaxation, recreation, and more, like filming.
+                                Much like other places by Waishuangxi, our team found that  the Zhishan Art Center is not only a place where people come to view artwork,
+                                but also a quiet “third space” in the city to pause, reflect, and connect with deeper parts of Taiwanese culture.
+                                Visitors can often be seen slowly moving through the galleries or sitting peacefully in the center’s quiet environment.
+                                This museum might not display 1000s of artworks compared to the National Palace Museum, but one can find themselves wandering endlessly here.
                             </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                Our team found the park to be a notable “third place,” which is a location outside of work or school and home where people can connect with others and form a community (find this source).
-                            </p>
-                            <blockquote className="w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
-                                “I felt quite relaxed in the park and I really liked the pavilion in the middle— you can chill there, enjoy the lake view, or just take a break.”
-                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Celine Hsu, 2025</footer>
+                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
+                                "Each life has unlimited potential. How you bring out “Nam Myoho Renge Kyo”, brings out your highest human being in."
+                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Ms.Ishikawa, 2025</footer>
                             </blockquote>
                         </div>
                     </div>
@@ -108,12 +104,11 @@ export default function Soka() {
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>
                     <div className="flex flex-wrap justify-center gap-x-4 gap-y-4">
-                        <ImageModal src="/shuangxi/shuangxi-front.jpg" alt="Shuangxi Park Front Gates" label="Shuangxi Park Front Gates"/>
-                        <ImageModal src="/shuangxi/lily.jpg" alt="Shuangxi Park Lily Pads" label="Shuangxi Park Lily Pads"/>
-                        <ImageModal src="/shuangxi/tree.JPG" alt="Shuangxi Park Tree" label="Shuangxi Park Tree"/>
-                        <ImageModal src="/shuangxi/pagoda.jpg" alt="Shuangxi Park Pagoda" label="Shuangxi Park Pagoda"/>
-                        <ImageModal src="/shuangxi/bridge.jpg" alt="Shuangxi Park Bridge" label="Shuangxi Park Bridge"/>
-                        <ImageModal src="/shuangxi/bird.jpg" alt="White Bird" label="White Bird"/>
+                        <ImageModal src="/soka/soka-front.jpg" alt="Front of Soka Art Museum" label="Front of Soka Art Museum"/>
+                        <ImageModal src="/soka/painting.jpg" alt="Hsiao Chin's Artwork" label="Hsiao Chin's Artwork"/>
+                        <ImageModal src="/soka/team.jpg" alt="Team & Soka Members" label="Team & Soka Members"/>
+                        <ImageModal src="/soka/gallery.jpg" alt="Gallery of Hsiao Chin's art" label="Gallery of Hsiao Chin's art"/>
+                        <ImageModal src="/soka/artwork.jpg" alt="Hsiao Chin's Artwork" label="Hsiao Chin's Artwork"/>
                     </div>
                 </div>
             </div>

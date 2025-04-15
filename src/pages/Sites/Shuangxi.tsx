@@ -1,5 +1,7 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
+import WordHover from "../../components/WordHover.tsx";
+import Footnote from "../../components/Footnote.tsx";
 
 export default function Shuangxi() {
     return (
@@ -43,17 +45,23 @@ export default function Shuangxi() {
                         <div>
                             <p className="sm:text-lg text-justify">
                                 We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園).
-                                Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as a tranquil, nature-filled haven in the middle of the city.
+                                Located at the intersection between Fulin Road and Zhishan Road in Shilin,
+                                the traditional Chinese-style park spans 3 acres and serves as a tranquil, nature-filled haven in the middle of the city.
+                                <Footnote number={1} href="https://www.taipeitravelgeek.com/shuangxi-park-and-chinese-garden" tooltip="Source: Visit the Idyllic Shuangxi Park and Chinese Garden - Taipei Travel Geek, 2019."/>
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Our team discovered that the director of the Yangmingshan Administration Bureau, Pan Qiwu, originally constructed the park for Chiang Kai-Shek’s birthday.
-                                Opening in 1972, the park today features elements of traditional Chinese gardens, like pavilions, zig-zag bridges, waterfalls, and an artificial hill.
-                                It also is named after the merging of two rivers— Jingquexi and Neishuangxi— into Waishuangxi (outer twin-river).
+                                Our team discovered that the director of the Yangmingshan Administration Bureau,
+                                Pan Qiwu, originally constructed the park for Chiang Kai-Shek’s birthday.
+                                <Footnote number={2} href="https://web-ch.scu.edu.tw/artsoc_usr/web_page/10940" tooltip="Source: 雙溪公園, 2023."/>
+                                {' '}
+                                Opening in 1972, the park today features elements of traditional Chinese gardens, like pavilions,
+                                zig-zag bridges, waterfalls, and an artificial hill. It also is named after the merging of two rivers— Jingquexi and Neishuangxi— into Waishuangxi (outer twin-river).
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                At the entrance of the park stands a large gate with engravings of the park’s title. As we entered the gate, we came across a Chinese Banyan tree, which was very well-maintained much like the other plants in the park.
+                                At the entrance of the park stands a large gate with engravings of the park’s title.
+                                As we entered the gate, we came across a Chinese Banyan tree, which was well-maintained much like the other plants in the park.
                             </p>
                             <figure className="w-[45%] float-right ml-15">
                                 <img
@@ -67,13 +75,22 @@ export default function Shuangxi() {
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                The park has a large variety of plant life throughout the seasons, including pine and palm trees, wisteria, and cherry blossoms.
-                                Walking around, we noticed palm trees and lemon-scented gum trees. We also saw turtles bathing in the sun and swimming, butterflies dancing around the plants, and many different kinds of fish and birds.
+                                The park has a large variety of plant life throughout the seasons, including pine and palm trees,
+                                wisteria, and cherry blossoms.
+                                <Footnote number={3} href="https://parks.gov.taipei/parks/en/en_parks.php?pmsid=469" tooltip="Source: 士林區 雙溪公園, n.d."/>
+                                {' '}
+                                Walking around, we noticed palm trees and lemon-scented gum trees.
+                                We also saw
+                                {' '}
+                                <WordHover label="turtles" src="/shuangxi/Shuangxi_Park_B-Roll.mp4" />
+                                {' '}
+                                bathing in the sun and swimming, butterflies dancing around the plants, and many different kinds of fish and birds.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
                                 In addition, we found out that in 2013 and 2014, then again in 2017, the Taipei City Government filled the man-made pond in the park with giant lily pads,
                                 native to South America, in order to attract more tourism to the site. The park returned to be generally uncrowded once the lily pads were gone.
+                                <Footnote number={4} href="https://www.goteamjosh.com/blog/tag/Park" tooltip="Source: Ellis, 2017."/>
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
@@ -96,9 +113,14 @@ export default function Shuangxi() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Our team found the park to be a notable “third place,” which is a location outside of work or school and home where people can connect with others and form a community (find this source).
+                                Our team found the park to be a notable “third place,” which is a location outside of work or school and home where people can connect with others and form a community.
+                                <Footnote number={5} href="https://www.brookings.edu/articles/third-places-as-community-builders/" tooltip="Source: Butler & Diaz, 2016."/>
                             </p>
-                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
+                            <br/>
+                            <p className="sm:text-lg text-justify">
+                                Though originally a gift for the president, the park is now a place for the public, sharing Chinese culture with all of Shilin.
+                            </p>
+                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-5 italic text-gray-700 text-lg">
                                 “I felt quite relaxed in the park and I really liked the pavilion in the middle— you can chill there, enjoy the lake view, or just take a break.”
                                 <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Celine Hsu, 2025</footer>
                             </blockquote>

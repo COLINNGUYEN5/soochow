@@ -11,6 +11,9 @@ import Shilin from "./pages/Sites/Shilin.tsx";
 import Soka from "./pages/Sites/Soka.tsx";
 import Shuangxi from "./pages/Sites/Shuangxi.tsx";
 import Fuyu from "./pages/Sites/Fuyu.tsx";
+import Zhishanyan from "./pages/Sites/Zhishanyan.tsx";
+import Soochow from "./pages/Sites/Soochow.tsx";
+
 
 function App() {
     return (
@@ -28,7 +31,8 @@ function App() {
                     <Route path="/sites/soka" element={<Soka />} />
                     <Route path="/sites/shuangxi" element={<Shuangxi />} />
                     <Route path="/sites/fuyu" element={<Fuyu />} />
-
+                    <Route path="/sites/zhishanyan" element={<Zhishanyan />} />
+                    <Route path="/sites/soochow" element={<Soochow />} />
 
                 </Routes>
         </div>

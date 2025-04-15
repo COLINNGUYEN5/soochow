@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import {Link} from "react-router-dom";
 
-export function CarouselWithContent() {
+export function Carousel() {
     return (
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -35,7 +35,7 @@ export function CarouselWithContent() {
                 <Link to={"sites/national"}>
                     <div className="relative h-full w-full">
                         <img
-                            src="/national.jpg"
+                            src="/national/national.jpg"
                             alt="image 2"
                             className="h-full w-full object-cover"
                         />
@@ -71,7 +71,7 @@ export function CarouselWithContent() {
                 <Link to={"sites/shilin"}>
                     <div className="relative h-full w-full">
                         <img
-                            src="/shilin.jpg"
+                            src="/shilin/front.jpg"
                             alt="image 4"
                             className="h-full w-full object-cover"
                         />
@@ -86,3 +86,5 @@ export function CarouselWithContent() {
         </Swiper>
     );
 }
+
+export default Carousel;

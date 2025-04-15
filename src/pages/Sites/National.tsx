@@ -5,6 +5,7 @@ import { OBJLoader } from 'three/addons/loaders/OBJLoader.js'
 import { MTLLoader } from 'three/addons/loaders/MTLLoader.js'
 import { TextureLoader } from 'three'
 import {ImageModal} from "../../components/ImageModal.tsx";
+import ScrollDownButton from "../../components/ScrollDownButton.tsx";
 
 function ElephantModel() {
 
@@ -101,17 +102,34 @@ function DogModel() {
 export default function National() {
     return (
         <div className="overflow-auto">
-            <img
-                src="/national.jpg"
-                alt="image 1"
-                className="h-full w-full object-cover"
-            />
-            <div className="py-8 sm:mx-60">
+            <div className="relative w-full h-full overflow-hidden rounded-b shadow">
+                <video
+                    src="/national/NPM_B-Roll.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    disablePictureInPicture
+                    className="w-full h-full rounded shadow object-cover"
+                >
+                    Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-y-4">
+                    <h1 className="text-white font-engravers text-4xl sm:text-6xl drop-shadow-lg text-center px-4">
+                        National Palace Museum
+                    </h1>
+                    <h2 className="text-white font-[200] font-newsreader sm:text-lg drop-shadow-lg text-center px-4">
+                        "Each life has unlimited potential. How you bring out “Nam Myoho Renge Kyo”, brings out your highest human being in."
+                        <footer className="mt-2 text-right text-sm not-italic text-white">— Ms.Ishikawa, 2025</footer>
+                    </h2>
+                </div>
+                <ScrollDownButton targetId="content" />
+            </div>
+            <div className="py-8 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
                     <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200">National Palace Museum</h1>
                     <div>
                         <img
-                            src="/national.jpg"
+                            src="/national/national.jpg"
                             alt="national-picture"
                             className="float-left w-168 h-auto mr-6 mb-4 object-cover rounded-lg"
                         />
