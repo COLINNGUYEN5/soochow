@@ -40,7 +40,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             />
             <MapPin
                 textureUrl="/pins/soka-pin.png"
-                position={[62, 2.3, 71.5]}
+                position={[61, 2.3, 72]}
                 label="Soka Art Museum"
                 route="/sites/soka"
                 onSelect={onPinSelect}
@@ -78,7 +78,25 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <MapPin
                 textureUrl="/pins/soochow.png"
                 position={[56, 2.3, 77]}
-                label="Soochow University" route="/sites/shuangxi"
+                label="Soochow University" route="/sites/soochow"
+                onSelect={onPinSelect}
+            />
+            <MapPin
+                textureUrl="/pins/neishuangxi.png"
+                position={[80, 3.7, 57]}
+                label="Neishuangxi" route="/sites/soochow"
+                onSelect={onPinSelect}
+            />
+            <MapPin
+                textureUrl="/pins/aboriginal.png"
+                position={[63, 2.3, 71]}
+                label="Shung Ye Museum of Formosan Aborigines" route="/sites/soochow"
+                onSelect={onPinSelect}
+            />
+            <MapPin
+                textureUrl="/pins/waishuangxi.png"
+                position={[69, 3, 64]}
+                label="Waishuangxi" route="/sites/soochow"
                 onSelect={onPinSelect}
             />
         </group>
