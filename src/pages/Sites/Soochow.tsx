@@ -118,7 +118,7 @@ export default function Soochow() {
                             </p>
                             <figure className="w-[50%] float-left mt-10 mr-15">
                                 <video
-                                    src="/soochow/Wayne_Video.MP4"
+                                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Wayne_Video.MP4"
                                     className="w-full h-auto object-cover rounded mb-2"
                                     controls
                                 />
@@ -150,7 +150,7 @@ export default function Soochow() {
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>
                     <div className="flex flex-wrap justify-center gap-x-4 gap-y-4">
                         <ImageModal src="/soochow/front.jpg" alt="Soochow University Gate" label="Soochow University Gate"/>
-                        <ImageModal src="/soochow/pond.jpg" alt="Koi Poind" label="Koi Pond"/>
+                        <ImageModal src="/soochow/pond.jpg" alt="Koi Pond" label="Koi Pond"/>
                         <ImageModal src="/soochow/field.jpg" alt="Queue for Bus 557" label="Queue for Bus 557"/>
                         <ImageModal src="/soochow/river.jpg" alt="Waishuangxi Riverside" label="Waishuangxi Riverside"/>
                         <ImageModal src="/soochow/711.jpg" alt="7-Eleven Vending Machine" label="7-Eleven Vending Machine"/>

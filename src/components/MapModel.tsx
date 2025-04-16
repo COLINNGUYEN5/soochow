@@ -13,7 +13,7 @@ type MapModelProps = {
 };
 
 export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
-    const { scene } = useGLTF('/models/WSXMap.glb');
+    const { scene } = useGLTF('https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/WSXMap.glb');
 
     useEffect(() => {
         console.log('✅ GLB loaded');
