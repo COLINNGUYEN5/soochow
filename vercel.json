@@ -1,11 +1,5 @@
 {
   "build": {
-    "env": {
-      "GIT_LFS_ENABLED": "1"
-    }
-  },
-  "rewrites": [
-    { "source": "/models/(.*)", "destination": "/models/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+    "env": {}
+  }
 }
