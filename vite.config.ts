@@ -7,4 +7,8 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  assetsInclude: ['**/*.png'],
+  build: {
+    assetsDir: 'assets', // Organizes assets in build output
+  }
 })

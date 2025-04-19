@@ -1,7 +1,13 @@
 {
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
-      "source": "/(.*).png",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
