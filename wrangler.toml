@@ -1,7 +1,0 @@
-name = "soochow-r2"
-account_id = "d71f802cb0e4a8a36571122f6437ed7d"
-
-[[r2_buckets]]
-binding = "SOOCHOW_BUCKET"
-bucket_name = "soochow-assets"
-preview_bucket_name = "soochow-assets"
