@@ -1,4 +1,4 @@
-import grant from "/people/drgrant.png"
+import grant from "../assets/drgrant.png"
 
 export function AdvisorCard() {
     return (
