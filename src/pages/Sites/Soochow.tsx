@@ -7,7 +7,7 @@ export default function Soochow() {
         <div className="overflow-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="/soochow/Soochow_B-Roll.mp4"
+                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Soochow_B-Roll.mp4"
                     autoPlay
                     muted
                     loop
