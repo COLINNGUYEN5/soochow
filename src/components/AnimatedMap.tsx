@@ -17,7 +17,7 @@ export function AnimatedMap(){
                     wrapperStyle={{ width: "100%", height: "100%" }}
                     contentStyle={{ width: "100%", height: "100%" }}
                 >
-                    <img src="/animated.png" alt="Geography map of Waishuangxi" className="w-full h-full object-cover"/>
+                    <img src="/animated.jpg" alt="Geography map of Waishuangxi" className="w-full h-full object-cover"/>
                     <Link to={"/sites/national"}>
                         <div
                             className="absolute top-[66%] left-[40%] w-[5%] z-30 cursor-pointer group">

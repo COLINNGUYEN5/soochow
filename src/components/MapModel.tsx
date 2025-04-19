@@ -25,49 +25,49 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <primitive object={scene} />
 
             <MapPin
-                textureUrl="/pins/fuyu-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-fuyu.png"
                 position={[33, 2.3, 74.5]}
                 label="Fuyu Tea House"
                 route="/sites/fuyu"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/national-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/national-pin.png"
                 position={[59, 2.3, 69.5]}
                 label="National Palace Museum"
                 route="/sites/national"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/soka-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-soka.png"
                 position={[61, 2.3, 72]}
                 label="Soka Art Museum"
                 route="/sites/soka"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/shilin-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/shilin-pin.png"
                 position={[33, 2.3, 85]}
                 label="Shilin Night Market"
                 route="/sites/shilin"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/shuangxi-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-shuangxi.png"
                 position={[46, 2.3, 73.5]}
                 label="Shuangxi Park"
                 route="/sites/shuangxi"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/zhishanyan-pin.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-zhishanyan.png"
                 position={[41, 2.3, 68]}
                 label="Zhishanyan"
                 route="/sites/zhishanyan"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/egret.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-egret.png"
                 position={[46, 4.5, 82]}
                 label="Egret" route="/sites/shuangxi"
                 onSelect={onPinSelect}
@@ -76,25 +76,25 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
                 hoverScale={4}
             />
             <MapPin
-                textureUrl="/pins/soochow.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-soochow.png"
                 position={[56, 2.3, 77]}
                 label="Soochow University" route="/sites/soochow"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/neishuangxi.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-neishuangxi.png"
                 position={[80, 3.7, 57]}
                 label="Neishuangxi" route="/sites/soochow"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/aboriginal.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-aboriginal.png"
                 position={[63, 2.3, 71]}
                 label="Shung Ye Museum of Formosan Aborigines" route="/sites/soochow"
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="/pins/waishuangxi.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-waishuangxi.png"
                 position={[69, 3, 64]}
                 label="Waishuangxi" route="/sites/soochow"
                 onSelect={onPinSelect}
