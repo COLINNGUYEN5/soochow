@@ -57,12 +57,12 @@ export default function Soochow() {
                             <p className="sm:text-lg text-justify">
                                 We found a routine on campus pretty quickly. Most days started and ended with a trip to
                                 {' '}
-                                <WordHover label="7-Eleven" src="/soochow/7-Eleven.MP4" />
+                                <WordHover label="7-Eleven" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-711.mp4" />
                                 {' '}
                                 for snacks and when we didn’t feel like leaving campus,
                                 our other meals would be from the
                                 {' '}
-                                <WordHover label="cafeteria" src="/soochow/cafe.MP4" />
+                                <WordHover label="cafeteria" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-Cafe.mp4" />
                                 {' '}
                                 or the restaurants with street food located by the front gate.
                                 {' '}
@@ -87,7 +87,7 @@ export default function Soochow() {
                             <p className="sm:text-lg text-justify">
                                 One of our favorite things about the campus were the animals— there are a large number of
                                 {' '}
-                                <WordHover label="cats" src="/soochow/Cat_B-Roll.MP4" />
+                                <WordHover label="cats" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-Cat.mp4" />
                                 {' '}
                                 that roam around and get fed by the security guards,
                                 as well as a gorgeous koi pond behind the administrative building.
@@ -104,7 +104,7 @@ export default function Soochow() {
                                 During our first week, one of our buddies told us about elevator etiquette, where everyone needs to respect the direction of the elevator and line up for each individual elevator.
                                 In addition, there’s a
                                 {' '}
-                                <WordHover label="queue" src="/soochow/queue.MP4" />
+                                <WordHover label="queue" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/queue.MP4" />
                                 {' '}
                                 for the dedicated bus line (557) that stops conveniently in front of the school. In our experience, we have seen every student follow these rules,
                                 which is representative of the school’s respectful culture.
