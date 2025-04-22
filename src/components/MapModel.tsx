@@ -90,7 +90,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-aboriginal.png"
                 position={[63, 2.3, 71]}
-                label="Shung Ye Museum of Formosan Aborigines" route="/sites/soochow"
+                label="Shung Ye Museum of Formosan Aborigines" route="/sites/aboriginal"
                 onSelect={onPinSelect}
             />
             <MapPin

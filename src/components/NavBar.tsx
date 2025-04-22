@@ -24,12 +24,12 @@ const Navbar: React.FC = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/location" className="hover:text-gray-300">
+                        <Link to="/sites" className="hover:text-gray-300">
                             Locations
                         </Link>
                     </li>
                     <li>
-                        <Link to="/vlogs" className="hover:text-gray-300">
+                        <Link to="/collection" className="hover:text-gray-300">
                             Collection
                         </Link>
                     </li>
@@ -66,12 +66,12 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/location" className="block hover:text-gray-300">
-                                Locations
+                            <Link to="/sites" className="block hover:text-gray-300">
+                                Sites
                             </Link>
                         </li>
                         <li>
-                            <Link to="/vlogs" className="hover:text-gray-300">
+                            <Link to="/collection" className="hover:text-gray-300">
                                 Collection
                             </Link>
                         </li>

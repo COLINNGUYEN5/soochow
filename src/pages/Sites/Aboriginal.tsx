@@ -144,7 +144,7 @@ export default function Soochow() {
                             </p>
                             <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-5 italic text-gray-700 text-lg">
                                 “Soochow is famous for its academic records and its faculty and students are very friendly and nice, so international students here
-                                 gets very good education. So this is a place you must come.”
+                                gets very good education. So this is a place you must come.”
                                 <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Wayne Liang, 2025</footer>
                             </blockquote>
                         </div>

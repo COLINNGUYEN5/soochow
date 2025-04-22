@@ -1,41 +1,105 @@
+import { useEffect, useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { Link } from "react-router-dom";
+import {CartoonPin} from "./CartoonPin.tsx";
 
+export function AnimatedMap() {
+    const [initialScale, setInitialScale] = useState(1.5);
 
-export function AnimatedMap(){
+    useEffect(() => {
+        const width = window.innerWidth;
+
+        if (width < 480) {
+            setInitialScale(10.0); // extra zoom on very small phones
+        } else if (width < 768) {
+            setInitialScale(8.0); // tablets and small devices
+        } else if (width < 1024) {
+            setInitialScale(1.8); // medium screens
+        } else {
+            setInitialScale(1.5); // desktops
+        }
+
+        const handleResize = () => {
+            const newWidth = window.innerWidth;
+            if (newWidth < 480) {
+                setInitialScale(10.0);
+            } else if (newWidth < 768) {
+                setInitialScale(8.0);
+            } else if (newWidth < 1024) {
+                setInitialScale(1.8);
+            } else {
+                setInitialScale(1.5);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
-        <div className="w-full h-full relative">
+        <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden bg-black">
             <TransformWrapper
-                initialScale={1.75}
+                initialScale={initialScale}
                 minScale={1}
-                maxScale={7}
+                maxScale={10}
                 wheel={{ step: 50 }}
                 doubleClick={{ disabled: false }}
                 pinch={{ disabled: false }}
             >
                 <TransformComponent
                     wrapperStyle={{ width: "100%", height: "100%" }}
-                    contentStyle={{ width: "100%", height: "100%" }}
+                    contentStyle={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        position: "relative",
+                    }}
                 >
-                    <img src="/animated.jpg" alt="Geography map of Waishuangxi" className="w-full h-full object-cover"/>
-                    <Link to={"/sites/national"}>
-                        <div
-                            className="absolute top-[66%] left-[40%] w-[5%] z-30 cursor-pointer group">
-                            <img
-                                src="/cartoon/npm.png"
-                                alt="National Palace Museum"
-                                className="group-hover:scale-120 transition-transform duration-200"/>
-                            <div
-                                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                National Palace Museum
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 w-2 h-2 bg-black rotate-45"></div>
-                            </div>
-                        </div>
-                    </Link>
+                    <div className="relative aspect-[2434/1076] max-w-full h-auto w-full">
+                        <img
+                            src="/animated.jpg"
+                            alt="Geography map of Waishuangxi"
+                            className="w-full h-auto object-contain"
+                        />
+
+                        {/* Pins */}
+                        <CartoonPin
+                            to="/sites/national"
+                            icon="cartoon/npm.svg"
+                            label="National Palace Museum"
+                            top={67}
+                            left={43}
+                        />
+                        <CartoonPin
+                            to="/sites/soochow"
+                            icon="cartoon/soochow.svg"
+                            label="Soochow University"
+                            top={81}
+                            left={37}
+                            width="7%"
+                        />
+                        <CartoonPin
+                            to="/sites/soka"
+                            icon="cartoon/soka.svg"
+                            label="Soka Art Museum"
+                            top={77}
+                            left={44}
+                            width="3%"
+                        />
+                        <CartoonPin
+                            to="/sites/aboriginal"
+                            icon="cartoon/aboriginal.svg"
+                            label="Shung Ye Museum of Formosan Aborigines"
+                            top={72}
+                            left={49}
+                            width="4%"
+                        />
+                    </div>
                 </TransformComponent>
             </TransformWrapper>
         </div>
-    )
+    );
 }
 
 export default AnimatedMap;

@@ -1,5 +1,6 @@
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
 import {ImageModal} from "../../components/ImageModal.tsx";
+import Footnote from "../../components/Footnote.tsx";
 
 export default function Shilin() {
     return (
@@ -33,66 +34,72 @@ export default function Shilin() {
                         <figure className="w-[50%] float-left mr-10">
                             <img
                                 src="/shilin/front.jpg"
-                                alt="Shuangix Park Front Grate"
+                                alt="Night Market Entrance"
                                 className="w-full h-auto mr-6 mb-4 object-cover rounded-lg"
                             />
                             <figcaption className="text-sm text-center text-gray-600">
-                                Shuangxi Park Entrance Gate, photographed March 24
+                                Night Market Entrance, Photographed April 9
                             </figcaption>
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                Neighboring many schools such as Soochow University and being nearby the Shilin MRT Station,
-                                the Shilin Night Market is very popular among both tourists and local people.
-                                The night market holds many different types of businesses that includes restaurants, hawker stalls, clothing stores, and many more.
-                                The overwhelming number of shops combining with everything being on the cheaper end, offers a place for everyone visiting.
+                                Neighboring the Shilin MRT Station, the Shilin Night Market is popular among both tourists and local people.
+                                The night market holds different types of businesses, including restaurants, hawker stalls, clothing stores,
+                                carnival games, and many more. The staggering number of shops combined with everything being on the cheaper end,
+                                offers a place for everyone visiting.
                                 <sup title="Sourced from Taiwan Tourism Bureau">[1]</sup>
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                The Shilin Night Market can be dated back to the 1960-1970s, shortly after the end of World War II.
-                                At first, small food stands were set up to serve the locals, but as Taiwan was growing economically in this period,
-                                more and more tourists would be drawn to this area and so the stands would multiply, creating a wider range of sold goods.
+                                Through the Shilin Night Market, the Shilin area became a more popular spot and attracted people to the overall area.
+                                This growing population started to modernize the area as places such as the five theaters:
+                                the Shilin Theater, Yangming Theater, Lifeng Theater, Minsu Theater, and Kunghua Theater were created as recreational spots for these new faces.
+                                The night market not only became a commercial center but also became a cultural hotspot, as it shows the history of Shilin’s urban development through postwar.
+                                <Footnote number={1} href="https://travelsetu.com/guide/shilin-night-market-tourism/shilin-night-market-tourism-history" tooltip="Source: Shilin Night Market (Taipei) History, 2025."/>
                             </p>
-                            <figure className="w-[45%] float-right ml-15">
+                            <figure className="w-[47%] float-right ml-15">
                                 <img
                                     src="/shilin/candy.jpg"
-                                    alt="Lily Pads picture"
+                                    alt="Tanghulu Stand"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Giant Lily Pads, photographed by Josh Ellis, 2017
+                                    Tanghulu Stand, Photographed April 9
                                 </figcaption>
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Through the Shilin Night Market, the Shilin area became a more popular spot and attracted people to the overall area.
-                                This growing population started to modernize the area as places such as the five theaters: the Shilin Theater, Yangming Theater,
-                                Lifeng Theater, Minsu Theater, and Kunghua Theater were created as recreational spots for these new faces. The night market not only became a commercial center but also became a cultural hotspot,
-                                as it shows the history of Shilin’s urban development through postwar.
+                                Given that our team lives in Shilin, we have been to the Shilin Night Market countless times.
+                                In fact, everytime one of us needs something, our first thought is to go to the night market.
+                                Our first time visiting the night market, we immediately were drawn to the carnival games and spent a good amount of time and money trying to win the prizes.
+                                From our outside perspectives, we noticed a lot of the different cultures that represent themselves in the market.
+                                Walking around the area, we saw food stands of Japanese, Chinese, and Taiwanese aboriginal influence (such as the shrimp tempura, stinky tofu and steamed dumpling stands).
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                As the team lives in Soochow University, we have been to the Shilin Night Market countless times. From our outside perspectives, we noticed a lot of the different cultures that exist here.
-                                Walking around the area, there will be food stands of Japanese influence, Chinese influence, and Taiwanese aboriginal influence.
+                                Surprisingly though, even with all the food stands around, there is never trash on the floor.
+                                In Taiwan, there are no public trash cans and there is a culture of the Taiwanese people’s respectful attitude towards the environment,
+                                keeping it astoundingly clean. This culture does not only span in the night market as it embodies most of Taiwan.
+
                             </p>
                             <br/>
-                            <figure className="w-[50%] float-left mt-10 mr-15">
+                            <figure className="w-[50%] float-left mt-10 mr-10">
                                 <img
                                     src="/shilin/clothes.jpg"
-                                    alt="Shuangix Park Lily Pads"
+                                    alt="Clothing Stand"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Chinese Banyan Tree at Shuangxi Park Entrance, photographed March 24
+                                    Clothing Stand, Photographed April 9
                                 </figcaption>
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                All these aspects of Shilin Night Market creates a story that is not all just about eating but rather a story of Taiwan’s history and identity.
+                                All these aspects of Shilin Night Market create a story that is not all just about eating but rather a story of Taiwan’s history and identity.
                                 We have seen how the night market has been influenced by the past, but it also reflects a lot of modern influence now.
-                                From the trending bubble tea, to the hip-hop streetwear shops, the market creates a dynamic cultural space for all generations.
-                                On one end, you can see an elderly lady serving traditional Taiwanese food, while just next by, you can hear K-Pop that sells baggy jeans that can fit over one’s torso.
+                                From the trending bubble tea, to the hip-hop streetwear shops, the market creates a cultural space for all generations.
+                                On one end, you can see an elderly lady serving traditional Taiwanese food. Next door, you can hear a K-Pop store that sells baggy jeans and metallic vintage accessories.
+                                Across the street, you can play addicting carnival games to win plushies and lego sets.
                             </p>
                             <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
                                 “Everytime I go there, I leave with my pockets empty and my stomach full.”

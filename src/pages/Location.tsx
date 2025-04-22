@@ -3,7 +3,7 @@ import LocationCards from "../components/LocationCards.tsx";
 export default function Location() {
     return (
         <div className="overflow-auto flex flex-col text-center my-10 mx-4">
-            <label className="text-6xl font-bold">Locations</label>
+            <label className="text-6xl font-bold">Sites</label>
             <div className="flex flex-wrap justify-center gap-12 my-5">
 
                 <LocationCards
