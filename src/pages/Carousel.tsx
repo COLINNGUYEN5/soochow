@@ -1,7 +1,4 @@
-import React from 'react';
 import LiquidDistortion from '../components/LiquidDistortion';
-
-const sprites = ['/soochow/front.jpg', '/national/national.jpg', '/soka/soka-front.jpg'];
 
 export default function Carousel() {
     return (
