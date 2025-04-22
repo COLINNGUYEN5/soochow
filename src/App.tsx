@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Carousel from "./pages/Carousel"
 import About from "./pages/About";
 import Location from "./pages/Location";
 import Navbar from "./components/NavBar.tsx";
@@ -19,22 +20,23 @@ function App() {
     return (
         <div className="overflow-hidden flex flex-col h-screen">
             <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/sites" element={<Location />} />
-                    <Route path="/collection" element={<Collection />} />
-                    <Route path="/sites/waishuangxi" element={<Waishuangxi />} />
-                    <Route path="/sites/national" element={<National />} />
-                    <Route path="/sites/shilin" element={<Shilin />} />
-                    <Route path="/sites/soka" element={<Soka />} />
-                    <Route path="/sites/shuangxi" element={<Shuangxi />} />
-                    <Route path="/sites/fuyu" element={<Fuyu />} />
-                    <Route path="/sites/zhishanyan" element={<Zhishanyan />} />
-                    <Route path="/sites/soochow" element={<Soochow />} />
-                    <Route path="/sites/aboriginal" element={<Aboriginal />} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/carousel" element={<Carousel />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/sites" element={<Location />} />
+                <Route path="/collection" element={<Collection />} />
+                <Route path="/sites/waishuangxi" element={<Waishuangxi />} />
+                <Route path="/sites/national" element={<National />} />
+                <Route path="/sites/shilin" element={<Shilin />} />
+                <Route path="/sites/soka" element={<Soka />} />
+                <Route path="/sites/shuangxi" element={<Shuangxi />} />
+                <Route path="/sites/fuyu" element={<Fuyu />} />
+                <Route path="/sites/zhishanyan" element={<Zhishanyan />} />
+                <Route path="/sites/soochow" element={<Soochow />} />
+                <Route path="/sites/aboriginal" element={<Aboriginal />} />
 
-                </Routes>
+            </Routes>
         </div>
     );
 }
