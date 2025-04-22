@@ -23,7 +23,7 @@ export default function About() {
             <AdvisorCard/>
             <div className="flex justify-center container mx-auto px-10 pb-10 border-b-1 border-gray-200">
                 <p className="text-xl text-gray-800">
-                    The team would like to extend our deepest gratitude to our advisors, Dr. Grant Burrier, Dr. Philip Hultquist, and Dr. Wen-Hua Du,
+                    The team would like to extend our deepest gratitude to our advisors, Dr. Grant Burrier and Dr. Philip Hultquist,
                     for their guidance and expertise which has been invaluable to the success of this project. Their feedback and insights
                     have played a crucial role in shaping the quality of our research and work.
                 </p>
@@ -33,7 +33,7 @@ export default function About() {
             <SponsorCard/>
             <div className="flex justify-center container mx-auto px-10 pb-10">
                 <p className="text-xl text-gray-800">
-                    This project would not have been possible without the help of our sponsors, Dr. Mi Chienkuo, Dr. Fu-sheng Shih, and Jill Hsiung.
+                    This project would not have been possible without the help of our sponsors, Dr. Mi Chienkuo, Dr. Fu-sheng Shih.
                     We are very grateful for their initiative of starting this project, and fostering the collaboration between WPI and Soochow University.
                     This experience has been truly memorable, and the experience and insights we have gained of Taiwan will be something we never forget.
                 </p>

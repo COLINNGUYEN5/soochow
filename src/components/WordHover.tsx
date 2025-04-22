@@ -16,6 +16,7 @@ export default function WordHover({ label, src }: WordHoverProps) {
                 autoPlay
                 muted
                 loop
+                disablePictureInPicture
                 className="rounded-lg shadow-lg w-full h-full object-cover"
             />
         ) : (

@@ -20,7 +20,7 @@ export function Map({ setLoading }: { setLoading: (loading: boolean) => void }) 
         route: string;
         position: [number, number, number];
     }) => {
-        panControlsRef.current?.panAndZoomTo(pin.position, 10);
+        panControlsRef.current?.panAndZoomTo(pin.position, 2);
         // Optional: navigate after short delay to allow smooth pan
         setTimeout(() => {
             navigate(pin.route);

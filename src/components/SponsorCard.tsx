@@ -25,19 +25,6 @@ export function SponsorCard() {
                 </div>
             </div>
 
-            <div className="w-72 h-fit place-self-center">
-                <img src="/people/jill.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
-                <div className="text-center py-2 bg-white shadow-md">
-                    <p className="mb-2">
-                        Jill Hsiung
-                    </p>
-                    <p className="font-medium blue-gray">
-                        Secretary in the Department of Sociology
-                    </p>
-                </div>
-            </div>
-
-
         </div>
     );
 }

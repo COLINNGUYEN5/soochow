@@ -4,7 +4,7 @@ import {
     useEffect,
     useRef,
     useImperativeHandle,
-    forwardRef,
+    forwardRef, useState,
 } from 'react';
 import { Vector3, MOUSE } from 'three';
 
@@ -19,15 +19,20 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
     const { camera } = useThree();
 
     const BOUNDS = {
-        minX: 40,
-        maxX: 65,
+        minX: 33.5,
+        maxX: 83,
         minZ: 50,
-        maxZ: 100,
+        maxZ: 90,
     };
 
-    const offsetRef = useRef<Vector3 | null>(null);
 
+    const offsetRef = useRef<Vector3 | null>(null);
+    const pendingZoomDistance = useRef<number | null>(null);
+    const zoomTimeout = useRef<NodeJS.Timeout | null>(null);
     const isPanning = useRef(false);
+    const [triggerZoom, setTriggerZoom] = useState(false);
+    const isZooming = useRef(false);
+    const desiredZoomOffset = useRef<Vector3 | null>(null);
     const currentTarget = useRef(new Vector3(60, 0, 70));
     const desiredTarget = useRef(new Vector3(60, 0, 70));
 
@@ -40,22 +45,23 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             isPanning.current = true;
         },
 
-        panAndZoomTo: (newTarget: [number, number, number], zoomDistance = 8) => {
+        panAndZoomTo: (newTarget: [number, number, number], zoomDistance = 7) => {
             if (controlsRef.current) {
                 const controls = controlsRef.current;
 
-                // Set current target for smooth pan
+                // Start panning
                 currentTarget.current.copy(controls.target);
                 desiredTarget.current.set(...newTarget);
                 isPanning.current = true;
 
-                // Calculate the direction from camera to target
-                const direction = camera.position.clone().sub(controls.target).normalize();
+                // Save zoom distance for animation
+                pendingZoomDistance.current = zoomDistance;
+                // 👇 Force camera to start from far away
+                setTriggerZoom(true);
 
-                // Set new offsetRef based on the desired zoom distance
-                offsetRef.current = direction.multiplyScalar(zoomDistance);
             }
         }
+
 
     }));
 
@@ -71,15 +77,45 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
 
         controls.target.copy(currentTarget.current);
         offsetRef.current = camera.position.clone().sub(controls.target);
-
+        const dist = offsetRef.current.length();
+        const clamped = Math.min(12, Math.max(10, dist));
+        offsetRef.current.setLength(clamped);
         // OrbitControls config
         controls.enableRotate = false;
         controls.enableZoom = true;
         controls.enablePan = true;
         controls.screenSpacePanning = false;
-
         controls.update();
+
+
+        return () => {
+            if (zoomTimeout.current) {
+                clearTimeout(zoomTimeout.current);
+            }
+        };
+
     }, [camera]);
+
+    useEffect(() => {
+        if (!triggerZoom || pendingZoomDistance.current === null) return;
+
+        console.log("⌛ Starting zoom delay...");
+        zoomTimeout.current = setTimeout(() => {
+            const controls = controlsRef.current;
+            if (!controls) return;
+
+            const direction = camera.position.clone().sub(controls.target).normalize();
+            desiredZoomOffset.current = direction.multiplyScalar(pendingZoomDistance.current!);
+            isZooming.current = true;
+
+            console.log("✅ Zoom started with distance:", pendingZoomDistance.current);
+
+            pendingZoomDistance.current = null;
+            zoomTimeout.current = null;
+            setTriggerZoom(false); // Reset the state
+        }, 500);
+    }, [triggerZoom]);
+
 
 
 
@@ -100,29 +136,46 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
 
             const newCamPos = clampedTarget.clone().add(offsetRef.current);
             camera.position.copy(clampCamera(newCamPos));
-        } else {
-            // --- User-controlled panning logic ---
-            // 1. Clamp the target
+        }
+
+        // ✅ Trigger zoom after panning (with delay)
+
+        // ✅ Animate zooming by lerping the offset
+        if (isZooming.current && desiredZoomOffset.current && offsetRef.current) {
+            offsetRef.current.lerp(desiredZoomOffset.current, 0.01);
+
+            console.log("Zooming... offset length:", offsetRef.current.length());
+
+            // Stop when close enough
+            if (offsetRef.current.distanceTo(desiredZoomOffset.current) < 0.05) {
+                offsetRef.current.copy(desiredZoomOffset.current);
+                isZooming.current = false;
+                desiredZoomOffset.current = null;
+            }
+
+            const camPos = controls.target.clone().add(offsetRef.current);
+            camera.position.copy(camPos); // ⛔ No clamping while zooming
+        }
+
+        // ✅ Resume clamping only after zooming
+        if (
+            !isPanning.current &&
+            !isZooming.current &&
+            pendingZoomDistance.current === null
+        ) {
             const clampedTarget = clampTarget(controls.target);
             controls.target.copy(clampedTarget);
 
-            // 2. Recompute offset from clamped target
             const offset = camera.position.clone().sub(controls.target);
-
-            // 3. Clamp camera position based on this offset
             const clampedCamPos = clampCamera(clampedTarget.clone().add(offset));
             camera.position.copy(clampedCamPos);
         }
 
-        // --- Finalize update ---
+        // --- Final update ---
         controls.update();
-
-        // ✅ Force the camera to stay level and upright
         camera.up.set(0, 1, 0);
         camera.lookAt(controls.target);
     });
-
-
 
 
 
@@ -137,12 +190,15 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
     }
 
     function clampCamera(vec: Vector3): Vector3 {
-        return new Vector3(
-            Math.min(BOUNDS.maxX + 15, Math.max(BOUNDS.minX - 15, vec.x)),
-            vec.y, // ✅ Let user zoom vertically, but don't touch Y for pan
-            Math.min(BOUNDS.maxZ + 15, Math.max(BOUNDS.minZ - 15, vec.z))
-        );
+        const target = controlsRef.current?.target ?? new Vector3(0, 0, 0);
+        const direction = vec.clone().sub(target).normalize();
+        const distance = vec.distanceTo(target);
+
+        const clampedDistance = Math.min(12, Math.max(7, distance)); // match minDistance/maxDistance
+
+        return target.clone().add(direction.multiplyScalar(clampedDistance));
     }
+
 
 
     return (
@@ -151,13 +207,13 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             enableRotate={false}
             enableZoom={true}
             enablePan={true}
-            screenSpacePanning={false}
+            screenSpacePanning={true}
             minPolarAngle={Math.PI / 5}  // ✅ lock to horizontal view
             maxPolarAngle={Math.PI / 5}  // ✅ lock to horizontal view
             minAzimuthAngle={0}           // ✅ Freeze horizontal rotation
             maxAzimuthAngle={0}
-            minDistance={20}
-            maxDistance={40}
+            minDistance={10}
+            maxDistance={12}
             mouseButtons={{
                 LEFT: MOUSE.PAN,
                 MIDDLE: MOUSE.DOLLY,
