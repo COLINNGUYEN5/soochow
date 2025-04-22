@@ -1,5 +1,6 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
+import WordHover from "../../components/WordHover.tsx";
 
 export default function Fuyu() {
     return (
@@ -48,17 +49,24 @@ export default function Fuyu() {
                             <br/>
                             <p className="sm:text-lg text-justify">
                                 Inside the store, we talked to the owner of the tea house, Qing-zhang Huang.
-                                Mr. Huang has lived in this neighborhood his whole life, and has 2 daughters. He inherited this tea shop from his father,
-                                and now 1 of his daughters is also learning the craftsmanship of tea.
-
+                                Mr. Huang has lived in this neighborhood his whole life, and has 2 daughters.
+                                He inherited this tea shop from his father, and now one of his daughters is also learning the craftsmanship of tea.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
                                 Mr. Huang grew up in the neighborhood, going to the same grade and high schools his father did.
                                 At a time of Japanese occupation, his family life was very strict and structured. He still has a sense of respect and obedience towards his mother,
-                                who was the main caretaker. Around this time, Western influence, mainly from American tourists started to change his surroundings, and so the Shilin neighborhood started becoming more diverse.
+                                who was the main caretaker. Around this time, Western influence, mainly from American tourists started to change his surroundings,
+                                and so the Shilin neighborhood started becoming more diverse.
                             </p>
-                            <figure className="w-[45%] float-right ml-15">
+                            <br/>
+                            <p className="sm:text-lg text-justify">
+                                Traditionally, tea plays a significant role in Chinese culture. In the past,
+                                moms or daughters in the family would serve tea for guests as a gesture of hospitality.
+                                Through these means, people were able to tell how educated one was based on the tea they served.
+                            </p>
+                            <br/>
+                            <figure className="w-[47%] float-right ml-15">
                                 <img
                                     src="/fuyu/tea.jpg"
                                     alt="Tea"
@@ -68,18 +76,37 @@ export default function Fuyu() {
                                     Tea at Fuyu Tea House, photographed March 25
                                 </figcaption>
                             </figure>
-                            <br/>
                             <p className="sm:text-lg text-justify">
-                                In the past, tea played a significant role in Chinese culture. The mom or daughter would traditionally serve tea for guests as a gesture of hospitality.
-                                Through this means, people were able to tell how educated one was based on the tea they served. For Mr. Huang, however, tea is not only a way to welcome guests into your house,
-                                but also a way to socialize and bond with your close friends. He likes the aspect of meeting face to face with his friends and drinking tea, but he claims now the culture and environment has changed.
+                                Mr. Huang also has a family tradition of going to Alishan, a mountain in central Taiwan, multiple times a year to pick his own tea leaves.
+                                We also had the privilege to go to
+                                Alishan
+                                {' '}
+                                <WordHover label="Alishan" src="/fuyu/alishan.jpg" />
+                                {' '}
+                                to immerse ourselves into the long-established tea-making process.
+                                During our trip, we learned how to pick tea leaves,
+                                {' '}
+                                <WordHover label="how oxidation of leaves works" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/oxidation.mp4" />
+                                {' '}
+                                , and which types of drying or fermentation methods determine the resultant tea.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Mr. Huang claims his daughter and the era of phones has changed things around this neighborhood. When he was little, he enjoyed strolling through the mountain areas and viewing the scenery.
-                                Now, with urbanization, the tall buildings have blocked the views and the destruction of the green spaces has made it hotter.
+                                For Mr. Huang, tea is not only a family tradition requiring decades to master, but also a means to bond with your close friends. He enjoys the intimacy of meeting face-to-face with his friends and drinking tea, as it is one of the ways he could connect with people in the community.
                             </p>
-                            <figure className="w-[50%] float-left mt-10 mr-15">
+                            <br/>
+                            <p className="sm:text-lg text-justify">
+                                During his youth, everyone in the tight-knit community knew everything that happened in the neighborhood.
+                                However, he believes the newer generation has shifted away from this, as the introduction of the internet has led to people connecting online instead,
+                                as he has seen through his daughter.
+                            </p>
+                            <br/>
+                            <p className="sm:text-lg text-justify">
+                                With many businesses opening in Shilin for economic reasons,
+                                the community has become less bonded. Tourists coming in are good for small businesses like his tea shop,
+                                but it has changed the community which Mr. Huang misses.
+                            </p>
+                            <figure className="w-[50%] float-left mt-10 mr-10">
                                 <img
                                     src="/fuyu/shelf.jpg"
                                     alt="Shuangix Park Lily Pads"
@@ -91,11 +118,17 @@ export default function Fuyu() {
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Not only has the landscape changed but so did the culture.
-                                All the generations used to know everything that happens in the neighborhood, but now with all the businesses coming in for economic reasons,
-                                the community became less bonded. Tourists coming in are good for businesses such as his tea shop, but it has changed the community which Mr. Huang misses.
+                                In addition, Mr. Huang has also witnessed change within Shilin’s landscape over the past couple of decades.
+                                When he was little, he enjoyed strolling through the mountain areas and viewing the scenery.
+                                Now, with
+                                {' '}
+                                <WordHover label="urbanization" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/dance.MP4" />
+                                {' '}                                , the tall buildings have blocked the views and encouraged the destruction of the green spaces,
+                                which used to provide natural shade and absorb heat.
                             </p>
-                            <br/>
+                            <p className="sm:text-lg text-justify">
+                                Our conversation with Mr. Huang revealed a lot about modern developments in the Shilin area and his tea shop remains a capsule of Shilin’s past.
+                            </p>
                             <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
                                 "Everyone that lives here has known each other for a long time. All the generations know each other and everything that happens here."
                                 <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Mr.Huang, 2025</footer>

@@ -63,7 +63,7 @@ export default function Shuangxi() {
                                 At the entrance of the park stands a large gate with engravings of the park’s title.
                                 As we entered the gate, we came across a Chinese Banyan tree, which was well-maintained much like the other plants in the park.
                             </p>
-                            <figure className="w-[45%] float-right ml-15">
+                            <figure className="w-[47%] float-right ml-15">
                                 <img
                                     src="/shuangxi/tree.JPG"
                                     alt="Lily Pads picture"
@@ -97,7 +97,7 @@ export default function Shuangxi() {
                                 Towards the center of the park, we came across a group of people— one of which was wearing hanfu— filming a scene reminiscent of historic wuxia.
                                 We also noticed elderly people taking a light stroll through the park and relaxing on the benches.
                             </p>
-                            <figure className="w-[50%] float-left mt-10 mr-15">
+                            <figure className="w-[50%] float-left mt-10 mr-10">
                                 <img
                                     src="/shuangxi/lily.jpg"
                                     alt="Shuangix Park Lily Pads"

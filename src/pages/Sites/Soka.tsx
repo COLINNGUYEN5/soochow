@@ -54,7 +54,7 @@ export default function Soka() {
                                 M+ Museum (Hong Kong), Musée Guimet (Paris), and many more.
 
                             </p>
-                            <figure className="w-[45%] float-right ml-15 mb-5 mt-5">
+                            <figure className="w-[47%] float-right ml-15 mb-5 mt-5">
                                 <img
                                     src="/soka/painting.jpg"
                                     alt="Hsiao Chin's Artwork"
@@ -77,7 +77,7 @@ export default function Soka() {
                                 culture and education. Their mission is to “create the highest value of life.” In Taiwan, the organization has been recognized extensively for its cultural and educational contributions,
                                 receiving awards like the Executive Yuan Award the the Ministry of Culture’s Wenxin Award.
                             </p>
-                            <figure className="w-[50%] float-left mr-15 mt-5">
+                            <figure className="w-[50%] float-left mr-10 mt-5">
                                 <img
                                     src="/soka/team.jpg"
                                     alt="Team & Soka Members"
