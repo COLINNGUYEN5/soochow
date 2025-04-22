@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                         <Link to="/sites" className="hover:text-gray-300">
-                            Locations
+                            Sites
                         </Link>
                     </li>
                     <li>

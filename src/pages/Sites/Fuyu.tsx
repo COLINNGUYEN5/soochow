@@ -122,7 +122,7 @@ export default function Fuyu() {
                                 When he was little, he enjoyed strolling through the mountain areas and viewing the scenery.
                                 Now, with
                                 {' '}
-                                <WordHover label="urbanization" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/dance.MP4" />
+                                <WordHover label="urbanization" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/construction.MP4" />
                                 {' '}                                , the tall buildings have blocked the views and encouraged the destruction of the green spaces,
                                 which used to provide natural shade and absorb heat.
                             </p>
