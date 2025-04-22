@@ -95,6 +95,22 @@ export function AnimatedMap() {
                             left={49}
                             width="4%"
                         />
+                        <CartoonPin
+                            to="/sites/shuangxi"
+                            icon="cartoon/shuangxi.svg"
+                            label="Shuangxi Park"
+                            top={75}
+                            left={28}
+                            width="4%"
+                        />
+                        <CartoonPin
+                            to="/sites/shuangxi"
+                            icon="cartoon/canal.svg"
+                            label="Canal System"
+                            top={75}
+                            left={28}
+                            width="4%"
+                        />
                     </div>
                 </TransformComponent>
             </TransformWrapper>

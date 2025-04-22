@@ -49,14 +49,14 @@ export default function Collection() {
         },
         {
             name: 'Huang Qing-Zhang',
-            title: 'Traditional Chinese tea shop owner',
+            title: 'Traditional Tea Shop Owner',
             image: '/fuyu/collab.jpg',
             quote: "Tea is more than a drink, it’s a lifestyle.",
             portrait: "/fuyu/oolong.jpg",
         },
         {
             name: 'Wayne Liang',
-            title: 'Director of International Affairs Center',
+            title: 'Director of International Affairs Center\nSoochow University',
             image: '/collection/wayne.jpg',
             quote: "Soochow is famous for its academic records and its faculty and students are very friendly and nice so international students here gets very good education. So this is a place you must come.",
         },
