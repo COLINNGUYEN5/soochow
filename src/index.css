@@ -25,3 +25,23 @@
 .font-engravers {
     font-family: 'EngraversMT', serif;
 }
+
+.slide-wrapper {
+    display: none;
+}
+
+.scene-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: inline-block;
+}
+
+.scene-nav--next {
+    right: 2%;
+}
+
+.scene-nav--prev {
+    left: 2%;
+}
