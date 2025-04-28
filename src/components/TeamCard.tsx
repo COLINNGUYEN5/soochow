@@ -2,7 +2,7 @@ export function TeamCard() {
     return (
         <div className="flex flex-col md:flex-row justify-center gap-12">
             <div className="w-72 h-fit place-self-center">
-                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <img src="/people/colin.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
                 <div className="text-center py-2 bg-white shadow-md">
                     <p className="mb-2">
                         Colin Nguyen
@@ -26,7 +26,7 @@ export function TeamCard() {
             </div>
 
             <div className="w-72 h-fit place-self-center">
-                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <img src="/people/sean.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
                 <div className="bg-white text-center py-2 shadow-md">
                     <p className="mb-2">
                         Sean Okamoto
@@ -38,7 +38,7 @@ export function TeamCard() {
             </div>
 
             <div className="w-72 h-fit place-self-center">
-                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" className="h-70 w-full object-cover"/>
+                <img src="/people/isha.JPG" alt="profile-picture" className="h-70 w-full object-cover"/>
                 <div className="text-center py-2 bg-white shadow-md">
                     <p className="mb-2">
                         Aishwarya Sinha

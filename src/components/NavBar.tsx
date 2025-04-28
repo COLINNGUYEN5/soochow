@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <nav className="w-screen bg-black text-white px-4 py-1 shadow-md z-10">
+        <nav className="w-screen bg-black text-white px-4 py-1 shadow-md z-30">
             <div className="mx-auto flex justify-between items-center">
                 <div className="flex items-center gap-x-3">
                     <Link to="/" className="text-xl font-bold">

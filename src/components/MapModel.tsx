@@ -33,14 +33,14 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             />
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/national-pin.png"
-                position={[59, 2.3, 69.5]}
+                position={[59, 2.5, 69.5]}
                 label="National Palace Museum"
                 route="/sites/national"
                 onSelect={onPinSelect}
             />
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-soka.png"
-                position={[61, 2.3, 72]}
+                position={[61, 2.5, 72]}
                 label="Soka Art Museum"
                 route="/sites/soka"
                 onSelect={onPinSelect}
@@ -61,7 +61,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             />
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-zhishanyan.png"
-                position={[41, 2.3, 68]}
+                position={[41, 2.5, 68]}
                 label="Zhishanyan"
                 route="/sites/zhishanyan"
                 onSelect={onPinSelect}
@@ -69,15 +69,51 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-egret.png"
                 position={[46, 4.5, 82]}
-                label="Egret" route="/sites/shuangxi"
+                label="Egret" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
                 width={2}
                 height={2}
                 hoverScale={4}
             />
             <MapPin
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Qili'an.png"
+                position={[40, 1.7, 77]}
+                label="Qili'an Stone" route="/sites/miscellaneous"
+                onSelect={onPinSelect}
+                width={2}
+                height={2}
+                hoverScale={4}
+            />
+            <MapPin
+                textureUrl="./cartoon/canal.svg"
+                position={[32, 2, 79]}
+                label="Fudeyang Canal System" route="/sites/miscellaneous"
+                onSelect={onPinSelect}
+                width={2}
+                height={2}
+                hoverScale={4}
+            />
+            <MapPin
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Mulberry.png"
+                position={[52, 2, 75]}
+                label="Paper Mulberry Tree" route="/sites/miscellaneous"
+                onSelect={onPinSelect}
+                width={3}
+                height={3}
+                hoverScale={4}
+            />
+            <MapPin
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Elephant.png"
+                position={[67, 2.5, 68]}
+                label="Giant Elephant Ear Tree" route="/sites/miscellaneous"
+                onSelect={onPinSelect}
+                width={3}
+                height={3}
+                hoverScale={4}
+            />
+            <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-soochow.png"
-                position={[56, 2.3, 77]}
+                position={[56, 2.5, 77]}
                 label="Soochow University" route="/sites/soochow"
                 onSelect={onPinSelect}
             />
@@ -89,7 +125,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             />
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-aboriginal.png"
-                position={[63, 2.3, 71]}
+                position={[63, 2.5, 71]}
                 label="Shung Ye Museum of Formosan Aborigines" route="/sites/aboriginal"
                 onSelect={onPinSelect}
             />

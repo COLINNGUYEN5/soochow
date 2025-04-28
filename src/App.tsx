@@ -14,6 +14,7 @@ import Fuyu from "./pages/Sites/Fuyu.tsx";
 import Zhishanyan from "./pages/Sites/Zhishanyan.tsx";
 import Soochow from "./pages/Sites/Soochow.tsx";
 import Aboriginal from "./pages/Sites/Aboriginal.tsx";
+import Miscellaneous from "./pages/Miscellaneous.tsx";
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
                 <Route path="/sites/zhishanyan" element={<Zhishanyan />} />
                 <Route path="/sites/soochow" element={<Soochow />} />
                 <Route path="/sites/aboriginal" element={<Aboriginal />} />
-
+                <Route path="/sites/miscellaneous" element={<Miscellaneous />} />
             </Routes>
         </div>
     );
