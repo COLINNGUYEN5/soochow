@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type WordHoverProps = {
     label: string;
@@ -7,15 +7,19 @@ type WordHoverProps = {
 
 export default function WordHover({ label, src }: WordHoverProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-    const isVideo = src.match(/\.(mp4|webm|ogg)$/i); // basic file type check
+    const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
 
-    // Detect if it's a touch device (basic way)
-    const isTouchDevice = typeof window !== 'undefined' && 'ontouchstart' in window;
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+        }
+    }, []);
 
     const toggleOpen = () => {
         if (isTouchDevice) {
-            setIsOpen((prev) => !prev);
+            setIsOpen(prev => !prev);
         }
     };
 
@@ -25,12 +29,13 @@ export default function WordHover({ label, src }: WordHoverProps) {
             onClick={toggleOpen}
         >
             <span className="text-blue-500">{label}</span>
-            <div className={`
-                absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-80 h-48 sm:w-[28rem] sm:h-64 md:w-[32rem] md:h-72 lg:w-[36rem] lg:h-80
-                hidden group-hover:flex
-                ${isOpen ? 'flex' : ''}
-                items-center justify-center z-50
-            `}>
+            <div
+                className={`
+                    absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-80 h-48 sm:w-[28rem] sm:h-64 md:w-[32rem] md:h-72 lg:w-[36rem] lg:h-80
+                    ${isTouchDevice ? (isOpen ? 'flex' : 'hidden') : 'group-hover:flex hidden'}
+                    items-center justify-center z-50
+                `}
+            >
                 {isVideo ? (
                     <video
                         src={src}
