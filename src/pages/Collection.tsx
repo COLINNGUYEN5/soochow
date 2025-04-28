@@ -17,7 +17,7 @@ export default function Collection() {
         {
             name: 'Dr. Shih',
             title: 'Professor of Sociology\nSoochow University',
-            image: '/collection/shih.jpg',
+            image: '/collection/hor-shih.jpg',
             quote: "Society evolves with the people who shape it.",
         },
         {
@@ -104,7 +104,7 @@ export default function Collection() {
                                         <img
                                             src={selected.portrait}
                                             alt={selected.name}
-                                            className="w-60 aspect-[3/4] object-cover rounded-lg shadow-md"
+                                            className="w-55 aspect-[3/4] object-cover rounded-lg shadow-md"
                                         />
                                         {selected.bio && (
                                             <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-sm place-self-center">
