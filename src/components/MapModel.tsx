@@ -67,49 +67,34 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
                 onSelect={onPinSelect}
             />
             <MapPin
-                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-egret.png"
-                position={[46, 4.5, 82]}
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Egret-Pin.png"
+                position={[46, 3.6, 82]}
                 label="Egret" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
-                width={2}
-                height={2}
-                hoverScale={4}
             />
             <MapPin
-                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Qili'an.png"
-                position={[40, 1.7, 77]}
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Qili'an-Pin.png"
+                position={[40, 2.4, 77]}
                 label="Qili'an Stone" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
-                width={2}
-                height={2}
-                hoverScale={4}
             />
             <MapPin
-                textureUrl="./cartoon/canal.svg"
-                position={[32, 2, 79]}
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Canal-Pin%20(1).png"
+                position={[32, 2.5, 79]}
                 label="Fudeyang Canal System" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
-                width={2}
-                height={2}
-                hoverScale={4}
             />
             <MapPin
-                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Mulberry.png"
-                position={[52, 2, 75]}
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Paper-Pin.png"
+                position={[52, 2.5, 75]}
                 label="Paper Mulberry Tree" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
-                width={3}
-                height={3}
-                hoverScale={4}
             />
             <MapPin
-                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Elephant.png"
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Elephant-Pin.png"
                 position={[67, 2.5, 68]}
                 label="Giant Elephant Ear Tree" route="/sites/miscellaneous"
                 onSelect={onPinSelect}
-                width={3}
-                height={3}
-                hoverScale={4}
             />
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-soochow.png"

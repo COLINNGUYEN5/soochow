@@ -104,12 +104,36 @@ export function AnimatedMap() {
                             width="4%"
                         />
                         <CartoonPin
-                            to="/sites/shuangxi"
+                            to="/sites/miscellaneous"
                             icon="cartoon/canal.svg"
                             label="Canal System"
-                            top={75}
-                            left={28}
+                            top={60}
+                            left={55}
                             width="4%"
+                        />
+                        <CartoonPin
+                            to="/sites/zhishanyan"
+                            icon="cartoon/zhishanyan.svg"
+                            label="Zhishanyan"
+                            top={62}
+                            left={27}
+                            width="4%"
+                        />
+                        <CartoonPin
+                            to="/sites/shilin"
+                            icon="cartoon/shilin.svg"
+                            label="Shilin Night Market"
+                            top={85}
+                            left={15}
+                            width="4%"
+                        />
+                        <CartoonPin
+                            to="/sites/fuyu"
+                            icon="cartoon/fuyu.svg"
+                            label="Fuyu Tea House"
+                            top={75}
+                            left={18}
+                            width="3%"
                         />
                     </div>
                 </TransformComponent>
