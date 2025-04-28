@@ -9,17 +9,15 @@ export default function WordHover({ label, src }: WordHoverProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-    const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
-
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
         }
     }, []);
+    const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
 
     const toggleOpen = () => {
         if (isTouchDevice) {
-            // Only toggle if not already open (prevents mass popping)
             setIsOpen(prev => !prev);
         }
     };
@@ -33,7 +31,7 @@ export default function WordHover({ label, src }: WordHoverProps) {
             <div
                 className={`
                     absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-80 h-48 sm:w-[28rem] sm:h-64 md:w-[32rem] md:h-72 lg:w-[36rem] lg:h-80
-                    ${isTouchDevice ? (isOpen ? 'flex' : 'hidden') : 'group-hover:flex hidden'}
+                    ${isTouchDevice ? (isOpen ? 'flex' : 'hidden') : 'hidden group-hover:flex'}
                     items-center justify-center z-50
                 `}
             >
