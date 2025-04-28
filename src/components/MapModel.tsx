@@ -105,7 +105,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-neishuangxi.png"
                 position={[80, 3.7, 57]}
-                label="Neishuangxi" route="/sites/soochow"
+                label="Neishuangxi" route="/sites/neishuangxi"
                 onSelect={onPinSelect}
             />
             <MapPin
@@ -117,7 +117,7 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
             <MapPin
                 textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/edited-waishuangxi.png"
                 position={[69, 3, 64]}
-                label="Waishuangxi" route="/sites/soochow"
+                label="Waishuangxi" route="/sites/waishuangxi"
                 onSelect={onPinSelect}
             />
         </group>

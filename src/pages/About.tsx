@@ -7,14 +7,24 @@ export default function About() {
         <div className="flex flex-col text-center my-10 gap-y-10 overflow-auto">
 
             <label className="text-6xl font-bold">Our Story</label>
-            <div className="flex justify-center container mx-auto px-10 pb-10 border-b-1 border-gray-200">
+            <div className="flex flex-col justify-center container mx-auto px-10 pb-10 border-b-1 border-gray-200">
                 <p className="text-xl text-gray-800">
                     In the words of Sunny, “Everything about the history and culture of Shilin was built by the river.”
                     Dating back to the aboriginals, the growth of Shilin has always wrapped around the Waishuangxi.
                     The river was there when the Qing Dynasty came into rule and situated their scholars in Shilin,
                     when the power shifted to the Japanese and Shilin began industrializing, and still when KMT rule began and Shilin became a rich area for agriculture and the residences of high-ranking officials.
                     While the buildings, people, and power in Shilin has changed, Waishuangxi has seen it all, giving it key significance to the area.
+                    Using these themes below, we developed a story of Shilin in our map that highlights the importance of the Waishuangxi and its ties to Shilin’s identity.
                 </p>
+                <br/>
+                <div>
+                    <ul className="flex flex-col sm:flex-row sm:justify-between lg:px-16 text-2xl font-bold">
+                        <li>Multiculturalism</li>
+                        <li>Interconnectedness</li>
+                        <li>Third Place</li>
+                    </ul>
+                    <br/>
+                </div>
             </div>
 
             <label className="text-6xl font-bold">Meet the Team</label>

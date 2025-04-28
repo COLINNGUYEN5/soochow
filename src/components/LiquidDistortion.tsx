@@ -5,6 +5,7 @@ import { Sprite } from '@pixi/sprite';
 import { Texture } from '@pixi/core';
 import { DisplacementFilter } from '@pixi/filter-displacement';
 import { WRAP_MODES } from '@pixi/constants';
+import { Assets } from '@pixi/assets'; // ✅ Pixi assets loader
 import { gsap } from 'gsap';
 
 interface LiquidDistortionProps {
@@ -16,38 +17,34 @@ interface LiquidDistortionProps {
 }
 
 export default function LiquidDistortion({
-    sprites,
-    displacementImage,
-    autoPlaySpeed = [10, 3],
-    displacementSize = [200, 200],
-    distortionIntensity = [200, 70],
-}: LiquidDistortionProps) {
+                                             sprites,
+                                             displacementImage,
+                                             autoPlaySpeed = [10, 3],
+                                             displacementSize = [200, 200],
+                                             distortionIntensity = [200, 70],
+                                         }: LiquidDistortionProps) {
     const canvasRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<Application | null>(null);
 
     const curIndex = useRef(0);
     const slidesContainer = useRef<Container | null>(null);
-    const spriteRefs = useRef<Sprite[]>([]); // 🔥 Use this to track sprites in correct order
-
+    const spriteRefs = useRef<Sprite[]>([]);
     const displacementSprite = useRef<Sprite | null>(null);
     const displacementFilter = useRef<DisplacementFilter | null>(null);
 
     const [loaded, setLoaded] = useState(false);
 
+    // ✅ Step 1: Preload images first
     useEffect(() => {
-        const loadImages = async () => {
-            const promises = sprites.map(src => new Promise<void>((resolve) => {
-                const img = new Image();
-                img.onload = () => resolve();
-                img.src = src;
-            }));
-            await Promise.all(promises);
-            setLoaded(true);
+        const preload = async () => {
+            await Assets.load([...sprites, displacementImage]);
+            setLoaded(true); // ✅ Mark as ready
         };
 
-        loadImages();
-    }, [sprites]);
+        preload();
+    }, [sprites, displacementImage]);
 
+    // ✅ Step 2: Create Pixi App only after loaded
     useEffect(() => {
         if (!loaded || !canvasRef.current) return;
 
@@ -71,7 +68,8 @@ export default function LiquidDistortion({
         stage.addChild(container);
 
         // Displacement Sprite
-        const dispSprite = Sprite.from(displacementImage);
+        const dispTexture = Texture.from(displacementImage);
+        const dispSprite = new Sprite(dispTexture);
         dispSprite.texture.baseTexture.wrapMode = WRAP_MODES.REPEAT;
 
         dispSprite.width = width;
@@ -80,63 +78,64 @@ export default function LiquidDistortion({
         dispSprite.x = width / 2;
         dispSprite.y = height / 2;
 
+        displacementSprite.current = dispSprite;
         stage.addChild(dispSprite);
 
         displacementFilter.current = new DisplacementFilter(dispSprite);
         stage.filters = [displacementFilter.current];
-        displacementSprite.current = dispSprite;
 
-        // Load and position sprites in correct order
+        // Main sprites
         sprites.forEach((src, index) => {
             const texture = Texture.from(src);
-            texture.baseTexture.on('loaded', () => {
-                const texWidth = texture.width;
-                const texHeight = texture.height;
 
-                const scale = Math.max(
-                    window.innerWidth / texWidth,
-                    window.innerHeight / texHeight
-                );
+            const texWidth = texture.width || window.innerWidth;
+            const texHeight = texture.height || window.innerHeight;
+            const scale = Math.max(window.innerWidth / texWidth, window.innerHeight / texHeight);
 
-                const sprite = new Sprite(texture);
-                sprite.anchor.set(0.5);
-                sprite.x = width / 2;
-                sprite.y = height / 2;
-                sprite.scale.set(scale);
-                sprite.alpha = index === 0 ? 1 : 0;
+            const sprite = new Sprite(texture);
+            sprite.anchor.set(0.5);
+            sprite.x = width / 2;
+            sprite.y = height / 2;
+            sprite.scale.set(scale);
+            sprite.alpha = index === 0 ? 1 : 0;
 
-                spriteRefs.current[index] = sprite; // ✅ Ensure correct order
-                container.addChild(sprite);
-            });
+            spriteRefs.current[index] = sprite;
+            container.addChild(sprite);
         });
 
         app.ticker.add(() => {
             if (displacementSprite.current) {
                 displacementSprite.current.x += autoPlaySpeed[0] * 0.3;
                 displacementSprite.current.y += autoPlaySpeed[1] * 0.3;
-
                 displacementSprite.current.scale.set(
                     displacementSize[0] / 100,
                     displacementSize[1] / 100
-                )
+                );
 
                 if (displacementFilter.current) {
                     displacementFilter.current.scale.set(
                         distortionIntensity[0],
                         distortionIntensity[1]
-                    )
+                    );
                 }
             }
         });
 
         return () => {
-            app.destroy(true, { children: true });
-            canvas.remove();
+            // ✅ Full cleanup
+            if (appRef.current) {
+                appRef.current.destroy(true, { children: true, texture: true, baseTexture: true });
+                appRef.current = null;
+            }
+            if (canvas.parentNode) {
+                canvas.parentNode.removeChild(canvas);
+            }
             spriteRefs.current = [];
             curIndex.current = 0;
         };
     }, [loaded, sprites, displacementImage, autoPlaySpeed, displacementSize, distortionIntensity]);
 
+    // ✅ Transition Animations
     const transitionTo = (index: number) => {
         const current = spriteRefs.current[curIndex.current];
         const next = spriteRefs.current[index];

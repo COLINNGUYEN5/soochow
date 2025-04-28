@@ -1,13 +1,13 @@
-import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
-import WordHover from "../../components/WordHover.tsx";
+import {ImageModal} from "../../components/ImageModal.tsx";
+import Footnote from "../../components/Footnote.tsx";
 
-export default function Soochow() {
+export default function Aboriginal() {
     return (
-        <div className="overflow-y-auto">
+        <div className="overflow-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Soochow_B-Roll.mp4"
+                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shilin_B-Roll.mp4"
                     autoPlay
                     muted
                     loop
@@ -18,134 +18,102 @@ export default function Soochow() {
                 </video>
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-y-4">
                     <h1 className="text-white font-engravers text-4xl sm:text-6xl drop-shadow-lg text-center px-4">
-                        Soochow University
+                        Shung Ye Museum of Formosan Aborigines
                     </h1>
                     <h2 className="text-white font-[200] font-newsreader sm:text-lg drop-shadow-lg text-center px-4">
-                        "Unto a Full-grown Man"
-                        <footer className="mt-2 text-right text-sm not-italic text-white">— Mr. Jiang Jieshi, 12th Year of the Republic of China</footer>
+                        “Everytime I go there, I leave with my pockets empty and my stomach full.”
+                        <footer className="mt-2 text-right text-sm not-italic text-white">— Isha Sinha, 2025</footer>
                     </h2>
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
             <div className="py-8 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200">Soochow University</h1>
+                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10">
                             <img
-                                src="/soochow/front.jpg"
-                                alt="Shuangix Park Front Grate"
+                                src="/aboriginal/front.jpg"
+                                alt="Front of Shung Ye Museum of Formosan Aborigines"
                                 className="w-full h-auto mr-6 mb-4 object-cover rounded-lg"
                             />
                             <figcaption className="text-sm text-center text-gray-600">
-                                Soochow University Gate, photographed March 20
+                                Front of Shung Ye Museum of Formosan Aborigines, Photographed April 9
                             </figcaption>
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                For two months, our team and 20 of our classmates lived and worked on the Waishuangxi campus of Soochow University (東吳大學).
-                                The experience gave us an understanding of the student life and community at the school.
+                                The Shung Ye Museum of Formosan Aborigines (also known as the Aboriginal Museum) is the first private museum that showcases the aborigines' rich culture and history (source).
+                                Created to bridge the knowledge and cultural gap between the Aboriginals and the current population, the museum uses many sources of media to bring out the interactivity of their culture.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                When we came to the school, we paired with “buddies,” which are current Soochow students.
-                                The buddies are the kindest and most welcoming people we’ve ever met. We spend time with them nearly every day and they consistently go out of their way to help us,
-                                whether it's showing us around, helping us translate, or just hanging out after class.
+                                When we went to the museum, we realized that the outside architecture closely resembled a house,
+                                with its two slopes on the sides. Upon entering, we were greeted by the front desk attendant.
+                                We got tickets and an English pamphlet (one of four language options!) that laid out the 4-story building,
+                                split by different topics like culture, clothing and housing, and music.
                             </p>
                             <br/>
-
                             <p className="sm:text-lg text-justify">
-                                We found a routine on campus pretty quickly. Most days started and ended with a trip to
-                                {' '}
-                                <WordHover label="7-Eleven" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-711.mp4" />
-                                {' '}
-                                for snacks and when we didn’t feel like leaving campus,
-                                our other meals would be from the
-                                {' '}
-                                <WordHover label="cafeteria" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-Cafe.mp4" />
-                                {' '}
-                                or the restaurants with street food located by the front gate.
-                                {' '}
+                                Starting at the bottom floor, we went into a theatre showing an animated film of the aboriginals and their daily life.
+                                We caught a bit about the different types of stones they used for cooking, building, etc. Also on the bottom floor,
+                                we were able to try out a few of the interactive instruments that they had, like the xylophone and the music band builder,
+                                and touch different vases and tools. Several of their displays of instruments and tools that they used for their rituals and festivals were intentionally interactive,
+                                which we think is to intrigue as many people as possible.
                             </p>
-                            <br/>
-                            <figure className="w-[47%] float-right ml-15">
+                            <figure className="w-[47%] float-right ml-15 pt-10">
                                 <img
-                                    src="/soochow/pond.jpg"
-                                    alt="Koi Pond"
+                                    src="/shilin/candy.jpg"
+                                    alt="Tanghulu Stand"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Koi Pond, photographed April 14
+                                    Tanghulu Stand, Photographed April 9
                                 </figcaption>
                             </figure>
+                            <br/>
                             <p className="sm:text-lg text-justify">
-                                Because Soochow University is built into the side of a hill, the campus is very vertical and walking up so many stairs just became part of the experience.
-                                We spent a lot of our time working at the picnic tables in the Grand Complex, where we could also eat and watch the sunset!
-                                Most days, we’d hang out with our Soochow buddies in the academic buildings or dorms as well.
+                                Moving up two floors, the next exhibit that caught our eyes was an AR map of one of their meeting halls.
+                                They had tablets on a swivel stand that allowed us to move around, and click on points that showed the insides,
+                                and what they were for, and what was there. The men’s gathering house of the Tsou people, the Amis hearth,
+                                and a life-size Paiwan slate house were a few more of the historic buildings that we saw there.
+                                That floor also showcased the intricate designs of their weavings for daily use essentials, like baskets and belts.
+                                They also had various vessels made to store and drink wine, and a section of some of their weapons and hunting tools.
+                                This floor was a good representation of their daily lives and how they used the surrounding area and materials to create a community.
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                One of our favorite things about the campus were the animals— there are a large number of
-                                {' '}
-                                <WordHover label="cats" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shorter-Cat.mp4" />
-                                {' '}
-                                that roam around and get fed by the security guards,
-                                as well as a gorgeous koi pond behind the administrative building.
-                            </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                The campus’s student life is also incredibly lively. Several days of the week we would find big group hip-hop,
-                                K-pop, or other styles of
-                                {' '}
-                                <WordHover label="dance" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/dance.MP4" />
-                                {' '}
-                                classes in the center of the Grand Complex. These group dance practices are hosted by student-led clubs and offer classes to their peers.
-                                In addition, the students also post and connect with other Soochow students online through an app called Dcard, fostering an engaging and vibrant community on campus.
-                            </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                What stood out to us while staying at the school was how polite and respectful everyone is on campus.
-                                During our first week, one of our buddies told us about elevator etiquette, where everyone needs to respect the direction of the elevator and line up for each individual elevator.
-                                In addition, there’s a
-                                {' '}
-                                <WordHover label="queue" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/queue.MP4" />
-                                {' '}
-                                for the dedicated bus line (557) that stops conveniently in front of the school. In our experience, we have seen every student follow these rules,
-                                which is representative of the school’s respectful culture.
-                            </p>
-                            <br/>
-                            <p className="sm:text-lg text-justify">
-                                Soochow University was the first private university set up in Taiwan.
-                                Its main campus in Waishuangxi opened in 1957 and was deeply influential on the development of the surrounding neighborhood,
-                                as Chiang Kai-Shek had close ties to the past university administration. Even the main gate of the university has significance,
-                                as it was designed by Wang Da-Hong, a famous architect and colleague of I.M. Pei (the designer of the Louvre Pyramid).
+                                We were particularly struck by the variety in art that we saw at the museum.
+                                The weaving for baskets and belts was different from their clothing and decoration.
+                                The next floor showed us the distinctive features and patterns of the textiles. The difference in material, dress,
+                                and decoration was also a good indicator of their status in the community. Some of the things displayed included the copper bell vest,
+                                a shell-bead vest, and more. Tattooing was also an important part of their culture, and was used to show various traits,
+                                like place of origin, job, coming of age, etc. The tattoos were a social status symbol and were also used to connect with ancestors.
                             </p>
                             <figure className="w-[50%] float-left mt-8 mr-10">
-                                <video
-                                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Wayne_Video.MP4"
+                                <img
+                                    src="/shilin/clothes.jpg"
+                                    alt="Clothing Stand"
                                     className="w-full h-auto object-cover rounded mb-2"
-                                    controls
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
-                                    Learn about 2025 international opportunities here:
-                                    <br/>
-                                    <a href="https://www.scu.edu.tw/entrance/anounce/114/H/01Fall/h-book-1.pdf" className="text-blue-500">International Opportunities</a>
-                                    <br/>
-                                    Learn about international office here:
-                                    <br/>
-                                    <a href="https://www.scu.edu.tw/icae/" className="text-blue-500">International Office</a>
+                                    Clothing Stand, Photographed April 9
                                 </figcaption>
                             </figure>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Soochow’s history and importance helps draw in a mix of students, both local and international.
-                                The university has a large international and exchange program, which is clearly visible from the diversity when we walk around campus.
-                                We also got to know Wayne Liang at the Office of International & Cross-Strait Academic Exchange, who had spoken very passionately about the global outreach and cultural exchange programs at Soochow.
+                                Multiple times throughout the year, the government helps host important cultural festivals open to everyone,
+                                to educate, but also to include others in a time of celebration. One of these celebrations is the Pasiwali Festival of the Amis tribe.
+                                Meaning to go to the east, in the direction of sunrise, the festival is a celebration of tribal music and boats.
+                                The harvest festival is one of the many ways that the Amis tribe celebrates the new harvest,
+                                and the boat journey is meant to symbolize the ritual cycle of remembrance, renewal, and return.
+                                It also carries their ancestors, and they make this journey just as their ancestors once did to honor them
+                                <Footnote number={1} href="https://taiwanpasiwalifestival.com/en/home/" tooltip="Source: Taiwan PASIWALI Festival 原住民族國際音樂節, 2023."/>
+                                .
                             </p>
-                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-5 italic text-gray-700 text-lg">
-                                “Soochow is famous for its academic records and its faculty and students are very friendly and nice, so international students here
-                                gets very good education. So this is a place you must come.”
-                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Wayne Liang, 2025</footer>
+                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
+                                “Everytime I go there, I leave with my pockets empty and my stomach full.”
+                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Isha Sinha, 2025</footer>
                             </blockquote>
                         </div>
                     </div>
@@ -153,14 +121,11 @@ export default function Soochow() {
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>
                     <div className="flex flex-wrap justify-center gap-x-4 gap-y-4">
-                        <ImageModal src="/soochow/front.jpg" alt="Soochow University Gate" label="Soochow University Gate"/>
-                        <ImageModal src="/soochow/pond.jpg" alt="Koi Pond" label="Koi Pond"/>
-                        <ImageModal src="/soochow/field.jpg" alt="Queue for Bus 557" label="Queue for Bus 557"/>
-                        <ImageModal src="/soochow/river.jpg" alt="Waishuangxi Riverside" label="Waishuangxi Riverside"/>
-                        <ImageModal src="/soochow/711.jpg" alt="7-Eleven Vending Machine" label="7-Eleven Vending Machine"/>
-                        <ImageModal src="/soochow/bus.jpg" alt="Food Bus" label="Food Bus"/>
-                        <ImageModal src="/soochow/bridge.jpg" alt="Bridge over Waishuangxi" label="Bridge over Waishuangxi"/>
-                        <ImageModal src="/soochow/slogan.jpg" alt="Soochow's Slogan" label="Soochow's Slogan"/>
+                        <ImageModal src="/shilin/front.jpg" alt="Shuangxi Park Front Gates" label="Shuangxi Park Front Gates"/>
+                        <ImageModal src="/shilin/candy.jpg" alt="Shuangxi Park Lily Pads" label="Shuangxi Park Lily Pads"/>
+                        <ImageModal src="/shilin/clothes.jpg" alt="Shuangxi Park Tree" label="Shuangxi Park Tree"/>
+                        <ImageModal src="/shilin/peanut.jpg" alt="Shuangxi Park Pagoda" label="Shuangxi Park Pagoda"/>
+                        <ImageModal src="/shilin/lemon.jpg" alt="Shuangxi Park Bridge" label="Shuangxi Park Bridge"/>
                     </div>
                 </div>
             </div>

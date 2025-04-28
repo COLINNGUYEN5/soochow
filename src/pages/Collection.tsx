@@ -119,7 +119,7 @@ export default function Collection() {
                 </div>
 
                 {/* Right side with quote +  large circular gallery */}
-                <div className="w-full lg:w-1/2 flex items-center justify-center relative">
+                <div className="w-full lg:w-1/2 flex items-center justify-center relative xl:pt-16">
                     <AnimatePresence mode="wait">
                         {selected && (
                             <motion.div
@@ -188,7 +188,7 @@ export default function Collection() {
 
             <div>
                 <motion.div
-                    className="flex flex-wrap justify-center items-center gap-4 h-full px-8"
+                    className="flex flex-wrap justify-center items-center gap-4 h-full px-8 xl:px-32 xl:pt-16"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -274,6 +274,8 @@ export default function Collection() {
                         description={
                             <>
                                 We found <b>Mr. Zhang</b> fishing at Waishuangxi underneath a bridge. Now retired, he has spent the last 10 years fishing as a casual hobby. He enjoys fishing in this area because of the shade the bridge has to offer on hot, sunny days. To him, Waishuangxi is an important place of relaxation and recreation.
+                                <br/>
+                                Mr. Zhang is an example of one of the many people who find their own use for the Waishuangxi. For him, the river is a perfect third place for retired people to continue relaxing in the daytime while enjoying the peaceful shade underneath the bridge. If the river were to be opened to the public, many more like Mr. Zhang would be able to find their own purpose at the river and learn to respect the nature in Shilin.
                             </>
                         }
                     />
@@ -293,7 +295,7 @@ export default function Collection() {
                     />
 
                     <MiscellaneousCard
-                        imgSrc="/soka/team.jpg"
+                        imgSrc="/collection/soka.jpg"
                         imgAlt="Soka Gokkai"
                         heading="Soka Gokkai"
                         caption="Team & Soka Gakkai members, photographed April 2"
@@ -310,7 +312,7 @@ export default function Collection() {
                         imgSrc="/collection/sunny.jpg"
                         imgAlt="Sunny Zheng"
                         heading="Sunny Zheng"
-                        caption="Sunny Zheng, Student at Soochow University, photographed March 26"
+                        caption="Sunny Zheng, Student at SCU, photographed March 26"
                         description={
                             <>
                                 <b>Sunny Zheng</b> is a freshman in Soochow University majoring in Sociology. He is from Taoyuan,  but he has been living in Shilin for about half a year. His family is Christian but he does not partake in the practices as he started questioning their beliefs around 15 years old.
@@ -324,7 +326,7 @@ export default function Collection() {
                         imgSrc="/collection/others.jpg"
                         imgAlt="Others"
                         heading="Others"
-                        caption="Walkway alongside the Shuangxi Riverside park, photographed April 7"
+                        caption="Shuangxi Riverside park, photographed April 7"
                         description={
                             <>
                                 During our walks along the Waishuangxi, we came across <b>multiple groups</b> of people using the riverside park in different ways. We found that each group of people have found a special way to fit the river in their lifestyle. Whether it’s dancing, exercise, or purely enjoying the river itself, the local residents in the Waishuangxi watershed area have found their third place—Waishuangxi.

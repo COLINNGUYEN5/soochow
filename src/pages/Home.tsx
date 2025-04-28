@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const CarouselWithContent = lazy(() => import("../components/Carousel"));
 const Map = lazy(() => import("../components/Map"));
-const Animiated = lazy(() => import("../components/AnimatedMap"));
+const Animated = lazy(() => import("../components/AnimatedMap"));
 
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
                                     className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-black/75 cursor-pointer"
                                     onClick={() => setClicked(false)}
                                 >
-                                    <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential tracking-[.35em]">
+                                    <p className="text-3xl md:text-4xl lg:text-5xl text-white font-engravers tracking-[.35em]">
                                         EXPLORE WAISHUANGXI
                                     </p>
                                 </div>
@@ -101,7 +101,7 @@ export default function Home() {
                         className="absolute inset-0 w-full h-full"
                     >
                         <div className="relative w-full h-full">
-                            <Animiated />
+                            <Animated />
                             <div className="absolute left-2 bottom-2 flex gap-2 z-10">
                                 <button
                                     className="bg-black rounded-lg w-10 h-10 p-2"

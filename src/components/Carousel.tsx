@@ -1,90 +1,15 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import {Link} from "react-router-dom";
+import LiquidDistortion from '../components/LiquidDistortion';
 
-export function Carousel() {
+export default function Carousel() {
     return (
-        <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000 }}
-            loop={true}
-            className="w-full h-full"
-        >
-            {/* Slide 1 */}
-            <SwiperSlide>
-                <Link to={"/sites/waishuangxi"}>
-                    <div className="relative h-full w-full">
-                        <img
-                            src="/waishuangxi.jpg"
-                            alt="image 1"
-                            className="h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-0 grid place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
-                                Waishuangxi
-                            </p>
-                        </div>
-                    </div>
-                </Link>
-            </SwiperSlide>
-
-            {/* Slide 2 */}
-            <SwiperSlide>
-                <Link to={"sites/national"}>
-                    <div className="relative h-full w-full">
-                        <img
-                            src="/national/national.jpg"
-                            alt="image 2"
-                            className="h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-white text-3xl md:text-4xl lg:text-5xl font-quintessential">
-                                National Palace Museum
-                            </p>
-                        </div>
-                    </div>
-                </Link>
-            </SwiperSlide>
-
-            {/* Slide 3 */}
-            <SwiperSlide>
-                <Link to={"sites/chiang"}>
-                    <div className="relative h-full w-full">
-                        <img
-                            src="/chiang.jpg"
-                            alt="image 3"
-                            className="h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
-                                Chiang Kai-Shek Shilin Residence
-                            </p>
-                        </div>
-                    </div>
-                </Link>
-            </SwiperSlide>
-
-            {/* Slide 4 */}
-            <SwiperSlide>
-                <Link to={"sites/shilin"}>
-                    <div className="relative h-full w-full">
-                        <img
-                            src="/shilin/front.jpg"
-                            alt="image 4"
-                            className="h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                            <p className="text-3xl md:text-4xl lg:text-5xl text-white font-quintessential">
-                                Shilin Night Market
-                            </p>
-                        </div>
-                    </div>
-                </Link>
-            </SwiperSlide>
-        </Swiper>
+        <div className="relative h-full w-full overflow-hidden">
+            <LiquidDistortion
+                sprites={['/soochow/front.jpg', '/national/national.jpg', '/soka/soka-front.jpg']}
+                displacementImage="/clouds.jpg"
+                autoPlaySpeed={[10, 3]}
+                displacementSize={[200, 270]}
+                distortionIntensity={[40, 40]}
+            />
+        </div>
     );
 }
-
-export default Carousel;

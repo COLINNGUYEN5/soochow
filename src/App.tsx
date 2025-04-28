@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Carousel from "./pages/Carousel"
 import About from "./pages/About";
 import Location from "./pages/Location";
 import Navbar from "./components/NavBar.tsx";
@@ -15,7 +14,8 @@ import Zhishanyan from "./pages/Sites/Zhishanyan.tsx";
 import Soochow from "./pages/Sites/Soochow.tsx";
 import Aboriginal from "./pages/Sites/Aboriginal.tsx";
 import Miscellaneous from "./pages/Miscellaneous.tsx";
-
+import Neishuangxi from "./pages/Sites/Neishuangxi.tsx";
+import Shennong from "./pages/Sites/Shennong.tsx";
 
 function App() {
     return (
@@ -23,7 +23,6 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/carousel" element={<Carousel />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/sites" element={<Location />} />
                 <Route path="/collection" element={<Collection />} />
@@ -37,6 +36,8 @@ function App() {
                 <Route path="/sites/soochow" element={<Soochow />} />
                 <Route path="/sites/aboriginal" element={<Aboriginal />} />
                 <Route path="/sites/miscellaneous" element={<Miscellaneous />} />
+                <Route path="/sites/neishuangxi" element={<Neishuangxi  />} />
+                <Route path="/sites/shennong" element={<Shennong  />} />
             </Routes>
         </div>
     );

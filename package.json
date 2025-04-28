@@ -12,6 +12,7 @@
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",
     "@pixi/app": "^7.4.3",
+    "@pixi/assets": "^7.4.3",
     "@pixi/core": "^7.4.3",
     "@pixi/display": "^7.4.3",
     "@pixi/filter-displacement": "^7.4.3",
