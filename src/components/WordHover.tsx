@@ -8,16 +8,22 @@ type WordHoverProps = {
 export default function WordHover({ label, src }: WordHoverProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
+    const [hasTapped, setHasTapped] = useState(false); // <== new
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
         }
     }, []);
+
     const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
 
     const toggleOpen = () => {
         if (isTouchDevice) {
+            if (!hasTapped) {
+                setHasTapped(true);
+                return; // <== block the first "ghost" tap
+            }
             setIsOpen(prev => !prev);
         }
     };
