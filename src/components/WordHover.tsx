@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type WordHoverProps = {
     label: string;
@@ -8,6 +8,7 @@ type WordHoverProps = {
 export default function WordHover({ label, src }: WordHoverProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isTouchDevice, setIsTouchDevice] = useState(false);
+    const labelRef = useRef<HTMLSpanElement>(null);
 
     const isVideo = src.match(/\.(mp4|webm|ogg)$/i);
 
@@ -17,18 +18,21 @@ export default function WordHover({ label, src }: WordHoverProps) {
         }
     }, []);
 
-    const toggleOpen = () => {
+    const handleClick = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         if (isTouchDevice) {
-            setIsOpen(prev => !prev);
+            // Only toggle if clicking exactly on the label (not random click elsewhere)
+            if (labelRef.current && labelRef.current.contains(e.target as Node)) {
+                setIsOpen(prev => !prev);
+            }
         }
     };
 
     return (
         <span
             className="relative group inline-block cursor-pointer"
-            onClick={toggleOpen}
+            onClick={handleClick}
         >
-            <span className="text-blue-500">{label}</span>
+            <span ref={labelRef} className="text-blue-500">{label}</span>
             <div
                 className={`
                     absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-80 h-48 sm:w-[28rem] sm:h-64 md:w-[32rem] md:h-72 lg:w-[36rem] lg:h-80
