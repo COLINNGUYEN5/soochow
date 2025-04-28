@@ -19,7 +19,7 @@ export default function LocationCards({ title, description, link, imageSrc } : L
             </div>
             <div className="p-4">
                 <p className="font-bold text-xl mb-2">{title}</p>
-                <p>{description}</p>
+                <p >{description}</p>
             </div>
             <div className="p-2">
                 <Link to={link}>

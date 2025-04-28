@@ -8,17 +8,23 @@ export default function Location() {
 
                 <LocationCards
                     title="Soochow University"
-                    description="For two months, our team and 20 of our classmates lived and worked on the Waishuangxi campus of Soochow University (東吳大學).
-                     The experience gave us an understanding of the student life and community at the school."
+                    description="For two months, our team and 20 of our classmates lived and worked on the Waishuangxi campus of Soochow University (東吳大學). The experience gave us an understanding of the student life and community at the school.
+                    When we came to the school, we paired with..."
                     link="/sites/soochow"
                     imageSrc="/soochow/front.jpg"/>
 
                 <LocationCards
                     title="Waishuangxi"
-                    description="The area does not have government-standardized borders, so what we define as the Waishuangxi watershed area is the area
-                            in Shilin west of the start of the Waishuangxi— where Jingquexi and Neishuangxi merge— and east of Keelung River."
+                    description="Given that the Waishuangxi is the heart of our research, our team found it essential to walk along the entire length of the Waishuangxi to truly understand its vibrancy and importance.
+                    Unexpectedly, we began to form our own relationship with the river..."
                     link="/sites/waishuangxi"
-                    imageSrc="/waishuangxi.jpg"/>
+                    imageSrc="/waishuangxi/front.jpg"/>
+
+                <LocationCards
+                    title="Neishuangxi"
+                    description="Neishuangxi, combined with the Jingquexi river, is the inner part of the Waishuangxi river. There exists only one road that takes you up the mountain, and through walking this path, the team saw a story being depicted of Neishuangxi’s history."
+                    link="/sites/neishuangxi"
+                    imageSrc="/neishuangxi/front.JPG"/>
 
                 <LocationCards
                     title="National Palace Museum"
@@ -27,6 +33,19 @@ export default function Location() {
                             showcasing art from various dynasties."
                     link="/sites/national"
                     imageSrc="/national/national.jpg"/>
+
+                <LocationCards
+                    title="Soka Art Museum"
+                    description="Soka Art Museum, which is a small, peaceful, and well-curated art exhibition tucked just across the street from the National Palace Museum.
+                     Unlike the grand scale of the National Palace Museum, the Soka Art Museum is an uncrowded space where we could see only one exhibit."
+                    imageSrc="/soka/soka-front.jpg"
+                    link="/sites/soka"/>
+
+                <LocationCards
+                    title="Shung Ye Museum of Formosan Aborigines"
+                    description="The Shung Ye Museum of Formosan Aborigines is the first private museum that showcases the aborigines' rich culture and history. Created to bridge the knowledge and cultural gap between the Aboriginals and the current population."
+                    imageSrc="/aboriginal/front.jpg"
+                    link="/sites/aboriginal"/>
 
                 <LocationCards
                     title="Shilin Night Market"
@@ -52,12 +71,16 @@ export default function Location() {
                     imageSrc="/shuangxi/shuangxi-front.jpg"/>
 
                 <LocationCards
-                    title="Soka Art Museum"
-                    description="Soka Art Museum, which is a small, peaceful, and well-curated art exhibition tucked just across the street from the National Palace Museum.
-                     Unlike the grand scale of the National Palace Museum, the Soka Art Museum is an uncrowded space where we could see only one exhibit."
-                    imageSrc="/soka/soka-front.jpg"
-                    link="/sites/soka"/>
+                    title="Zhishanyan"
+                    description="We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園). Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as..."
+                    link="/sites/zhishanyan"
+                    imageSrc="/zhishanyan/front.jpg"/>
 
+                <LocationCards
+                    title="Shen Nong Temple"
+                    description="We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園). Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as..."
+                    link="/sites/zhishanyan"
+                    imageSrc="/zhishanyan/front.jpg"/>
 
 
             </div>

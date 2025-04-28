@@ -64,10 +64,10 @@ export default function Collection() {
     ];
 
     return (
-        <div className="absolute inset-0 pt-4 overflow-y-auto overflow-x-hidden">
+        <div className="overflow-y-auto overflow-x-hidden">
             <div className="flex flex-col md:flex-col lg:flex-row min-h-screen">
                 {/* Left side with title */}
-                <div className="w-full lg:w-1/2 flex flex-col items-center justify-center p-8">
+                <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
                     <h2 className="text-xl md:text-2xl lg:text-3xl text-center">
                         We ask each of our interviewee:
                     </h2>
@@ -119,7 +119,7 @@ export default function Collection() {
                 </div>
 
                 {/* Right side with quote +  large circular gallery */}
-                <div className="w-full lg:w-1/2 flex items-center justify-center relative xl:pt-16">
+                <div className="w-full lg:w-1/2 flex items-center justify-center relative xl:pt-8">
                     <AnimatePresence mode="wait">
                         {selected && (
                             <motion.div
