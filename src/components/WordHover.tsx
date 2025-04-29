@@ -32,7 +32,7 @@ export default function WordHover({ label, src }: WordHoverProps) {
 
             {/* Desktop hover preview */}
             {!isTouchDevice && (
-                <div
+                <span
                     className={`
                         absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-80 h-48
                         sm:w-[28rem] sm:h-64 md:w-[32rem] md:h-72 lg:w-[36rem] lg:h-80
@@ -56,7 +56,7 @@ export default function WordHover({ label, src }: WordHoverProps) {
                             className="rounded-lg shadow-lg w-full h-full object-cover"
                         />
                     )}
-                </div>
+                </span>
             )}
 
             {/* Mobile full-screen popup (always image) */}

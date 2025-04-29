@@ -1,12 +1,13 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
+import WordHover from "../../components/WordHover.tsx";
 
 export default function Neishuangxi() {
     return (
         <div className="overflow-y-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Soochow_B-Roll.mp4"
+                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Neishuangxi_B-Roll.mp4"
                     autoPlay
                     muted
                     loop
@@ -19,12 +20,15 @@ export default function Neishuangxi() {
                     <h1 className="text-white font-engravers text-4xl sm:text-6xl drop-shadow-lg text-center px-4">
                         Neishuangxi
                     </h1>
+                    <h2 className="text-white font-[200] font-newsreader sm:text-lg drop-shadow-lg text-center px-4">
+                        "This place is a nice change of pace compared to the city."
+                        <footer className="mt-2 text-right text-sm not-italic text-white">— Colin Nguyen, 2025</footer>
+                    </h2>
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10">
                             <img
@@ -38,8 +42,8 @@ export default function Neishuangxi() {
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                Neishuangxi, combined with the Jingquexi river, is the inner part of the Waishuangxi river.
-                                There exists only one road that takes you up the mountain, and through walking this path,
+                                Neishuangxi, combined with the Jingquexi river, is the inner part of the Waishuangxi.
+                                There’s only one road that takes you up the mountain, and through walking this path,
                                 the team saw a story being depicted of Neishuangxi’s history.
                             </p>
                             <br/>
@@ -47,7 +51,10 @@ export default function Neishuangxi() {
                                 As the team started traveling down the Neishuangxi from Shengren Waterfall,
                                 we noticed that most of the riverside was closed off to the public. This was surprising to us because there were many beautiful,
                                 natural spots as we were walking down the river.
-                                Dr. Shih told us that an incident occured in the river where 15 students had died because the water treatment plant workers opened the floodgate to get rid of trash.
+                                {' '}
+                                <WordHover label="Dr. Shih" src="/collection/hor-shih.jpg" />
+                                {' '}
+                                told us that an incident occured in the river where 15 students had died because the water treatment plant workers opened the floodgate to get rid of trash.
                             </p>
                             <br/>
                             <figure className="w-[47%] float-right ml-15">
@@ -62,7 +69,11 @@ export default function Neishuangxi() {
                             </figure>
                             <p className="sm:text-lg text-justify">
                                 This affected both locals and tourists as it was a popular spot for various reasons.
-                                For locals, such as Dr. Shih and Chief Chuang of Linxi Village,
+                                For locals, such as Dr. Shih and
+                                {' '}
+                                <WordHover label="Chief Guo" src="/collection/chief.jpg" />
+                                {' '}
+                                of Linxi Village,
                                 when they were younger they would always barbeque near the river and hangout with friends.
                                 There would also be fishing stores along the river where locals would go shrimp fishing.
                                 For tourists, it was not too far from the heart of Taipei, making it a well-liked area to enjoy the scenic view of the river and the nature around it.
@@ -98,8 +109,18 @@ export default function Neishuangxi() {
                                 Compared to the busy environment of Taipei right nearby, this area provided a peaceful and soothing atmosphere.
                                 To the team, Neishuangxi was a “third place” where anyone could leave their comfort of the cities and relax and bond with the nature around them.
                             </p>
+                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
+                                "This is a nice change of pace compared to the city."
+                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Colin Nguyen, 2025</footer>
+                            </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/JsnvPpn9N8ZmVZKG7', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">111, Taipei City, Shilin District
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

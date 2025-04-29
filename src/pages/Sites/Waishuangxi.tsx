@@ -1,5 +1,7 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
+import WordHover from "../../components/WordHover.tsx";
+import {Link} from "react-router-dom";
 
 export default function Waishuangxi() {
     return (
@@ -19,12 +21,15 @@ export default function Waishuangxi() {
                     <h1 className="text-white font-engravers text-4xl sm:text-6xl drop-shadow-lg text-center px-4">
                         Waishuangxi
                     </h1>
+                    <h2 className="text-white font-[200] font-newsreader sm:text-lg drop-shadow-lg text-center px-4">
+                        “Everything about the history and culture of Shilin was built by the river.”
+                        <footer className="mt-2 text-right text-sm not-italic text-white">— Sunny Cheng, 2025</footer>
+                    </h2>
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10">
                             <img
@@ -44,17 +49,41 @@ export default function Waishuangxi() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                We began our walk at Shengren Waterfall, which is actually on the Neishuangxi. As we walked down the river,
+                                We began our walk at
+                                {' '}
+                                <WordHover label="Shengren Waterfall" src="/neishuangxi/waterfall.jpg" />
+                                , which is actually on the
+                                {' '}
+                                <Link to="/sites/neishuangxi" className="text-blue-500 underline hover:text-blue-700">
+                                    Neishuangxi
+                                </Link>
+                                . As we walked down the river,
                                 we saw stairways where we would approach the riverbank and climb across the rocks. Later on,
-                                our interviewee from the National Palace Museum, Marissa, shared that she used to bring her daughter to the river to skip across the rocks when she was young.
+                                our interviewee from the
+                                {' '}
+                                <Link to="/sites/national" className="text-blue-500 underline hover:text-blue-700">
+                                    National Palace Museum
+                                </Link>
+                                ,
+                                {' '}
+                                <WordHover label="Marissa" src="/collection/marissa.jpg" />
+                                , shared that she used to bring her daughter to the river to skip across the rocks when she was young.
                                 Her daughter disliked sports, so Marissa found that this was a fun way for her to get some exercise. Technically,
                                 although much of the river has been modified through government intervention, the areas with rocks remain mostly natural.
                                 In recent years, many of these natural sections have been closed to the public for safety reasons. However,
                                 several of our interviewees expressed that they believe the government should make more modifications to allow more of the river to be publicly accessible.
-                                For example, our sponsor, Dr. Fu-Sheng Shih, spoke in support of reopening the river when reflecting on his favorite memories of having barbecues with friends by the riverside during his college days (learn more with our Memory Collection page).
+                                For example, our sponsor,
+                                {' '}
+                                <WordHover label="Dr. Fu-Sheng Shih" src="/collection/hor-shih.jpg" />
+                                , spoke in support of reopening the river when reflecting on his favorite memories of having barbecues with friends by the riverside during his college days (learn more with our
+                                {' '}
+                                <Link to="/collection" className="text-blue-500 underline hover:text-blue-700">
+                                    Memory Collection page
+                                </Link>
+                                ).
                             </p>
                             <br/>
-                            <figure className="w-[47%] float-right ml-15">
+                            <figure className="w-[47%] float-right ml-15 pb-5">
                                 <img
                                     src="/waishuangxi/friends.jpg"
                                     alt="Two of our members watching the butterflies on the riverbank"
@@ -65,7 +94,14 @@ export default function Waishuangxi() {
                                 </figcaption>
                             </figure>
                             <p className="sm:text-lg text-justify">
-                                Stretching from the start of Soochow University all the way down to the merging with the Keelung River,
+                                Stretching from the start of
+                                {' '}
+                                <Link to="/sites/soochow" className="text-blue-500 underline hover:text-blue-700">
+                                    Soochow University
+                                </Link>
+                                {' '}
+
+                                all the way down to the merging with the Keelung River,
                                 the Waishuangxi Riverside Park follows the river. This park signifies a special place to many different people,
                                 and we were fortunate enough to talk to some of them. We came across families enjoying the tranquil nature,
                                 elderly couples ballroom dancing under the bridge, people biking on the path, and fishermen taking advantage of a relaxing and warm day.
@@ -73,15 +109,7 @@ export default function Waishuangxi() {
                                 As we visited the park more and more, we began to use it in the same way. In fact, we even spent an afternoon teaching one of our team members to bike there!
                             </p>
                             <br/>
-                            <p className="sm:text-lg text-justify">
-                                On one of our riverside walks, we passed by a trio of elderly ladies sitting on the park benches that overlook the river.
-                                We greeted them and explained to them who we were and why we were disturbing their peaceful time.
-                                They laughed and were happy to talk to us, so we spoke to them about our days, the weather, and where we were from.
-                                At some point in our conversation, we asked them if the river and park were an important part of their life.
-                                They said it was just a nice place, with good scenery and plenty of seating—nothing special. Still, we sat there, laughing and enjoying the river and the park together.
-                            </p>
-                            <br/>
-                            <figure className="w-[50%] float-left mr-10">
+                            <figure className="w-[50%] float-left mr-10 pt-5">
                                 <img
                                     src="/waishuangxi/far.jpg"
                                     alt="Two of our members standing on the rocks in the river"
@@ -100,14 +128,26 @@ export default function Waishuangxi() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                The park has its own life and identity, created through unique features such as the lotus pond,
+                                The park has its own life and identity, created through unique features such as the
+                                {' '}
+                                <WordHover label="lotus pond" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/lotus.mp4" />
+                                ,
                                 courts, exercising equipment, and more. We saw some of these things get used, but others sat untouched.
                                 About a fifteen-minute walk from the entrance to the park, there were rainbow stairs. Despite all the interesting attractions,
                                 most people there were simply sitting around, talking, and catching up with family and friends
                             </p>
-
+                            <blockquote className="sm:w-[45%] float-right border-l-4 border-gray-300 pl-4 mt-12 italic text-gray-700 text-lg">
+                                “Everything about the history and culture of Shilin was built by the river.”
+                                <footer className="mt-2 text-right text-sm not-italic text-gray-500">— Sunny Cheng, 2025</footer>
+                            </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/qpVMrPrnQcYaFTf67', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">外雙溪
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

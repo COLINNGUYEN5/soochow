@@ -27,9 +27,8 @@ export default function Fuyu() {
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10">
                             <img
@@ -43,7 +42,7 @@ export default function Fuyu() {
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                Fuyu Tea House (福宇茶莊老字號) is a multi-generational family-owned tea house north of the Shilin MRT station.
+                            Fuyu Tea House (福宇茶莊老字號) is a multi-generational family-owned tea house north of the Shilin MRT station.
                                 The tea house is nestled onto a small street next to the main road. They have two locations, one in Shilin, and another one in Taipei.
                             </p>
                             <br/>
@@ -135,6 +134,12 @@ export default function Fuyu() {
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/LsdVgBMoEeyJrjQB6', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">No. 101, Jihe Rd, Shilin District, Taipei City, 111
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

@@ -28,7 +28,7 @@ export default function Shuangxi() {
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
                     <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
@@ -44,7 +44,7 @@ export default function Shuangxi() {
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園).
+                                We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden.
                                 Located at the intersection between Fulin Road and Zhishan Road in Shilin,
                                 the traditional Chinese-style park spans 3 acres and serves as a tranquil, nature-filled haven in the middle of the city.
                                 <Footnote number={1} href="https://www.taipeitravelgeek.com/shuangxi-park-and-chinese-garden" tooltip="Source: Visit the Idyllic Shuangxi Park and Chinese Garden - Taipei Travel Geek, 2019."/>
@@ -63,9 +63,9 @@ export default function Shuangxi() {
                                 At the entrance of the park stands a large gate with engravings of the park’s title.
                                 As we entered the gate, we came across a Chinese Banyan tree, which was well-maintained much like the other plants in the park.
                             </p>
-                            <figure className="w-[47%] float-right ml-15">
+                            <figure className="w-[47%] float-right ml-15 mt-5">
                                 <img
-                                    src="/shuangxi/tree.JPG"
+                                    src="/shuangxi/lily.jpg"
                                     alt="Lily Pads picture"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
@@ -82,7 +82,7 @@ export default function Shuangxi() {
                                 Walking around, we noticed palm trees and lemon-scented gum trees.
                                 We also saw
                                 {' '}
-                                <WordHover label="turtles" src="/shuangxi/Shuangxi_Park_B-Roll.mp4" />
+                                <WordHover label="turtles" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Turtle.mp4" />
                                 {' '}
                                 bathing in the sun and swimming, butterflies dancing around the plants, and many different kinds of fish and birds.
                             </p>
@@ -99,8 +99,8 @@ export default function Shuangxi() {
                             </p>
                             <figure className="w-[50%] float-left mt-10 mr-10">
                                 <img
-                                    src="/shuangxi/lily.jpg"
-                                    alt="Shuangix Park Lily Pads"
+                                    src="/shuangxi/tree.JPG"
+                                    alt="Shuangxi Tree"
                                     className="w-full h-auto object-cover rounded mb-2"
                                 />
                                 <figcaption className="text-sm text-center text-gray-600">
@@ -113,7 +113,11 @@ export default function Shuangxi() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                Our team found the park to be a notable “third place,” which is a location outside of work or school and home where people can connect with others and form a community.
+                                Our team found the park to be a notable
+                                {' '}
+                                <WordHover label="“third place,”" src="/shuangxi/third.JPG" />
+                                {' '}
+                                which is a location outside of work or school and home where people can connect with others and form a community.
                                 <Footnote number={5} href="https://www.brookings.edu/articles/third-places-as-community-builders/" tooltip="Source: Butler & Diaz, 2016."/>
                             </p>
                             <br/>
@@ -126,6 +130,12 @@ export default function Shuangxi() {
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/MfW8CHMXYvrPxDRH8', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">No. 307, Fulin Rd, Shilin District, Taipei City, 111
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

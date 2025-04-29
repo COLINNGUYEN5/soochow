@@ -120,6 +120,12 @@ export function MapModel({ onLoadComplete, onPinSelect }: MapModelProps) {
                 label="Waishuangxi" route="/sites/waishuangxi"
                 onSelect={onPinSelect}
             />
+            <MapPin
+                textureUrl="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/shennong-pin.png"
+                position={[37, 3, 76]}
+                label="Shen Nong temple" route="/sites/shennong"
+                onSelect={onPinSelect}
+            />
         </group>
     );
 }

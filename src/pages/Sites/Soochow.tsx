@@ -27,9 +27,8 @@ export default function Soochow() {
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10">
                             <img
@@ -149,6 +148,12 @@ export default function Soochow() {
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/Cj6M5FqEZyv3G4st8', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">No. 70, Linxi Rd, Shilin District, Taipei City, 111
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

@@ -1,5 +1,7 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
+import Footnote from "../../components/Footnote.tsx";
+import WordHover from "../../components/WordHover.tsx";
 
 export default function Soka() {
     return (
@@ -26,9 +28,8 @@ export default function Soka() {
                 </div>
                 <ScrollDownButton targetId="content" />
             </div>
-            <div className="py-8 sm:mx-60" id="content">
+            <div className="py-12 sm:mx-60" id="content">
                 <div className="flex flex-col w-fit">
-                    <h1 className="text-6xl text-center mb-5 px-10 pb-6 border-b-1 border-gray-200"></h1>
                     <div className="mb-6">
                         <figure className="w-[50%] float-left mr-10 mb-5">
                             <img
@@ -49,9 +50,14 @@ export default function Soka() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                During our visit, the featured exhibition showcased the work of Taiwanese and Buddhist artist Hsiao Chin,
+                                During our visit, the featured exhibition showcased the work of Taiwanese and Buddhist artist
+                                {' '}
+                                <WordHover label="Hsiao Chin" src="/soka/hsiao.jpg" />
+                                ,
                                 who is well known for his abstract style. Today, his artwork is showcased in many places throughout the world including the Metropolitan Museum of Art (New York),
-                                M+ Museum (Hong Kong), Musée Guimet (Paris), and many more.
+                                M+ Museum (Hong Kong), Musée Guimet (Paris), and many more
+                                <Footnote number={1} href="https://www.3812gallery.com/artists/hsiao-chin/" tooltip="Source: Hsiao Chin 3812 Gallery, 2015."/>
+                                .
 
                             </p>
                             <figure className="w-[47%] float-right ml-15 mb-5 mt-5">
@@ -72,10 +78,15 @@ export default function Soka() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                After sitting down to talk to 4 members of the Soka Gakkai, the group discovered that the remainder of the building is occupied by the cultural headquarters of the Taiwan Soka Association,
+                                After sitting down to talk to 4 members of the
+                                {' '}
+                                <WordHover label="Soka Gakkai" src="/soka/members.jpg" />
+                                , the group discovered that the remainder of the building is occupied by the cultural headquarters of the Taiwan Soka Association,
                                 which is a branch of the Soka Gakkai and is a part of a series of 11 art centers. The Soka Gakkai is a religious international organization founded on Nichiren Daishonin’s Buddhism that promotes peace,
                                 culture and education. Their mission is to “create the highest value of life.” In Taiwan, the organization has been recognized extensively for its cultural and educational contributions,
-                                receiving awards like the Executive Yuan Award the the Ministry of Culture’s Wenxin Award.
+                                receiving awards like the Executive Yuan Award the the Ministry of Culture’s Wenxin Award
+                                <Footnote number={2} href="https://www.twsgi.org.tw/" tooltip="Source: Soka Gakkai, 2021."/>
+                                .
                             </p>
                             <figure className="w-[50%] float-left mr-10 mt-5">
                                 <img
@@ -100,6 +111,12 @@ export default function Soka() {
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/NM8S6cynfscDx7Bu8', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">No. 250, Sec 2, Zhi Shan Rd, Shilin District, Taipei City, 111
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

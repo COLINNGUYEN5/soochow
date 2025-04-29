@@ -7,7 +7,7 @@ export default function Shennong() {
         <div className="overflow-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shilin_B-Roll.mp4"
+                    src="chttps://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shilin_B-Roll.mp4"
                     autoPlay
                     muted
                     loop
@@ -117,6 +117,13 @@ export default function Shennong() {
                             </blockquote>
                         </div>
                     </div>
+                </div>
+                <div className="sm:text-lg text-end p-0 m-0">
+                    <span
+                        onClick={() => window.open('https://maps.app.goo.gl/nDdXSCjvq16tnMTH6', '_blank')}
+                        className="text-blue-500 underline cursor-pointer">No. 74, Qian St, Shilin District, Taipei City, 111
+
+                    </span>
                 </div>
                 <div>
                     <h1 className="text-6xl text-center mb-6 px-10 pb-10 border-b-1 border-gray-200">Gallery</h1>

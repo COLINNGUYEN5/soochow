@@ -57,7 +57,7 @@ export default function Location() {
 
                 <LocationCards
                     title="Fuyu Tea House"
-                    description="Fuyu Tea House is a multi-generational family-owned tea house north of the Shilin MRT station.
+                    description="Fuyu Tea House (福宇茶莊老字號) is a multi-generational family-owned tea house north of the Shilin MRT station.
                      The tea house is nestled onto a small street next to the main road. They have two locations, one in Shilin,
                       and another one in Taipei."
                     link="/sites/fuyu"
@@ -65,22 +65,23 @@ export default function Location() {
 
                 <LocationCards
                     title="Shuangxi Park"
-                    description="Shuangxi Park is a microcosm of traditional Chinese culture and it serves different purposes for everyone.
-                     For local residents, the park’s flora and fauna provide a place of relaxation, recreation, and more, like filming."
+                    description=" We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園).
+                                Located at the intersection between Fulin Road and Zhishan Road in Shilin,
+                                the traditional Chinese-style park spans 3 acres and serves as a tranquil..."
                     link="/sites/shuangxi"
                     imageSrc="/shuangxi/shuangxi-front.jpg"/>
 
                 <LocationCards
                     title="Zhishanyan"
-                    description="We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園). Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as..."
+                    description="After taking 120 steps to reach the top of the hill, Zhishanyan revealed itself as a hidden gem nestled away in the Shilin District of Taiwan. At the summit, we were greeted with diverging stone paths and elderly people using a public reading room."
                     link="/sites/zhishanyan"
                     imageSrc="/zhishanyan/front.jpg"/>
 
                 <LocationCards
                     title="Shen Nong Temple"
-                    description="We spent an afternoon taking a stroll through Shuangxi Park and Chinese Garden (雙溪公園). Located at the intersection between Fulin Road and Zhishan Road in Shilin, the traditional Chinese-style park spans 3 acres and serves as..."
-                    link="/sites/zhishanyan"
-                    imageSrc="/zhishanyan/front.jpg"/>
+                    description="Our team actually visited Shennong temple twice because of how beautiful it was, especially the insanely detailed roof. Shennong Temple is one of the three main ancient temples in Shilin, along with Zhishanyan’s Huiji Temple and Xinjie’s Cixian Temple."
+                    link="/sites/shennong"
+                    imageSrc="/shennong/front.jpg"/>
 
 
             </div>

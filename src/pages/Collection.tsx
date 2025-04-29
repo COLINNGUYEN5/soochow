@@ -16,7 +16,7 @@ export default function Collection() {
             bio: "Marissa Hu is a volunteer tour guide for the National Palace Museum (NPM). She loves Chinese calligraphy, and came to volunteer at the NPM because she has a passion for learning more about calligraphy at the museum. Through volunteering, she is exposed to an extensive collection of the history of calligraphy and she enjoys sharing the knowledge she learns at the museum with others."
         },
         {
-            name: 'Dr. Shih',
+            name: 'Dr. Fu-sheng Shih',
             title: 'Professor of Sociology\nSoochow University',
             image: '/collection/hor-shih.jpg',
             quote: "Almost every weekend, we went to Waishuangxi River, and we did a barbecue, almost quite often.",
@@ -40,7 +40,7 @@ export default function Collection() {
             bio: "Henry and Sherry are both tour guides from Stunning Taiwan that specializes in the history of the Shilin District. They both have extensive knowledge of this area as Sherry grew up in Shilin and Henry works there as a tour guide.",
         },
         {
-            name: 'Guo Zhao Fu',
+            name: 'Zhao-fu Guo',
             title: 'Linxi Village Chief',
             image: '/collection/chief.jpg',
             quote: "When I was little, I would play in the river with my friends, but it was dangerous, so we didn’t tell our parents because we were afraid of being scolded..",
@@ -48,7 +48,7 @@ export default function Collection() {
             bio: "Guo Zhao-fu is the Linxi Village head in Taiwan. He has taken this role from his father, the previous village head out of love for this land. His main role as the chief is to assist the local residents and act as a bridge between the community and the government.",
         },
         {
-            name: 'Dr. Ming-Li Yao',
+            name: 'Dr. Ming-li Yao',
             title: 'Professor of Sociology,\nSoochow University',
             image: '/collection/ming-li.jpg',
             quote: "The history about Waishuangxi River, is the Fudeyang Canal System.",
@@ -57,7 +57,7 @@ export default function Collection() {
 
         },
         {
-            name: 'Huang Qing-Zhang',
+            name: 'Qing-zhang Huang',
             title: 'Traditional Tea Shop Owner',
             image: '/fuyu/collab.jpg',
             quote: "There’s this strong, local Shilin bond. Since everyone’s parents knew each other, the cultural expectations were stronger.",
@@ -65,7 +65,7 @@ export default function Collection() {
             bio: "Huang Qing-zhang is the owner of a traditional tea shop in the Shilin District. He has lived here his whole life and has inherited this shop from his father. He owns two shops, one in Taipei and the one in Shilin.",
         },
         {
-            name: 'Sunny Zheng',
+            name: 'Sunny Cheng',
             title: 'Sociology student,\nSoochow University',
             image: '/collection/sunny.jpg',
             portrait: '/collection/sunny.jpg',
@@ -321,9 +321,9 @@ export default function Collection() {
 
                     <MiscellaneousCard
                         imgSrc="/collection/sunny.jpg"
-                        imgAlt="Sunny Zheng"
-                        heading="Sunny Zheng"
-                        caption="Sunny Zheng, Student at SCU, photographed March 26"
+                        imgAlt="Sunny Cheng"
+                        heading="Sunny Cheng"
+                        caption="Sunny Cheng, Student at SCU, photographed March 26"
                         description={
                             <>
                                 <b>Sunny Zheng</b> is a freshman in Soochow University majoring in Sociology. He is from Taoyuan,  but he has been living in Shilin for about half a year. His family is Christian but he does not partake in the practices as he started questioning their beliefs around 15 years old.
