@@ -1,13 +1,14 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
 import Footnote from "../../components/Footnote.tsx";
+import WordHover from "../../components/WordHover.tsx";
 
 export default function Zhishanyan() {
     return (
         <div className="overflow-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Shuangxi_Park_B-Roll.mp4"
+                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Zhishanyan_B-Roll_1.mp4"
                     autoPlay
                     muted
                     loop
@@ -49,7 +50,11 @@ export default function Zhishanyan() {
                             <br/>
                             <p className="sm:text-lg text-justify">
                                 In the past, this hill served as both a memorial site for the Japanese and an advantageous defensive point for the KMT,
-                                as there was a clear line of sight over Chiang Kai-Shek’s Shilin Residence and Taiwan’s military base
+                                as there was a clear line of
+                                {' '}
+                                <WordHover label="sight" src="/zhishanyan/sight.jpg" />
+                                {' '}
+                                over Chiang Kai-Shek’s Shilin Residence and Taiwan’s military base
                                 <Footnote number={1} href="https://taiwantrailsandtales.com/2019/12/29/zhishanyan-stroll/" tooltip="Source: ZHISHANYAN STROLL (芝山岩), 2019."/>
                                 .
                                 Throughout the hill, there are stone statues of animals acting as guardians along with various memorials.
@@ -82,8 +87,16 @@ export default function Zhishanyan() {
                             </p>
                             <br/>
                             <p className="sm:text-lg text-justify">
-                                As the team followed the path that leads toward the middle of the hills, the Zhishiyan Huiji temple appeared,
-                                tucked away within the trees. This temple was a traditional Taoist temple that has been renovated over the past years.
+                                As the team followed the
+                                {' '}
+                                <WordHover label="path" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/path.mp4" />
+                                {' '}
+                                that leads toward the middle of the hills, the Zhishiyan Huiji temple appeared,
+                                tucked away within the trees. This temple was a traditional Taoist temple that has been
+                                {' '}
+                                <WordHover label="renovated" src="/zhishanyan/renovate.jpg" />
+                                {' '}
+                                over the past years.
                                 Inside the temple contains historical remnants that depict a story about the local people of Shilin.
                                 Among these remnants is a stone tablet that acts as a memorial for the Shilin people that were killed during the Lin Shuangwen Incident
                                 <Footnote number={3} href="https://english.culture.gov.taipei/News_Content.aspx?n=546DBBFFD75F4602&sms=6606BE5E67AD9F4D&s=8F50609FE01FB78F" tooltip="Source: Department of Cultural Affairs, 2009a."/>

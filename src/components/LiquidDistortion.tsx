@@ -5,11 +5,18 @@ import { Sprite } from '@pixi/sprite';
 import { Texture } from '@pixi/core';
 import { DisplacementFilter } from '@pixi/filter-displacement';
 import { WRAP_MODES } from '@pixi/constants';
-import { Assets } from '@pixi/assets'; // ✅ Pixi assets loader
+import { Assets } from '@pixi/assets';
 import { gsap } from 'gsap';
 
+interface Slide {
+    image: string;
+    title: string;
+    quote: string;
+    link?: string;
+}
+
 interface LiquidDistortionProps {
-    sprites: string[];
+    slides: Slide[];
     displacementImage: string;
     autoPlaySpeed?: [number, number];
     displacementSize?: [number, number];
@@ -17,7 +24,7 @@ interface LiquidDistortionProps {
 }
 
 export default function LiquidDistortion({
-                                             sprites,
+                                             slides,
                                              displacementImage,
                                              autoPlaySpeed = [10, 3],
                                              displacementSize = [200, 200],
@@ -26,25 +33,25 @@ export default function LiquidDistortion({
     const canvasRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<Application | null>(null);
 
-    const curIndex = useRef(0);
     const slidesContainer = useRef<Container | null>(null);
     const spriteRefs = useRef<Sprite[]>([]);
     const displacementSprite = useRef<Sprite | null>(null);
     const displacementFilter = useRef<DisplacementFilter | null>(null);
 
     const [loaded, setLoaded] = useState(false);
+    const [curIndex, setCurIndex] = useState(0);
 
-    // ✅ Step 1: Preload images first
+    // Preload images
     useEffect(() => {
         const preload = async () => {
-            await Assets.load([...sprites, displacementImage]);
-            setLoaded(true); // ✅ Mark as ready
+            const imagePaths = slides.map(slide => slide.image);
+            await Assets.load([...imagePaths, displacementImage]);
+            setLoaded(true);
         };
 
         preload();
-    }, [sprites, displacementImage]);
+    }, [slides, displacementImage]);
 
-    // ✅ Step 2: Create Pixi App only after loaded
     useEffect(() => {
         if (!loaded || !canvasRef.current) return;
 
@@ -67,11 +74,10 @@ export default function LiquidDistortion({
         slidesContainer.current = container;
         stage.addChild(container);
 
-        // Displacement Sprite
+        // Displacement setup
         const dispTexture = Texture.from(displacementImage);
         const dispSprite = new Sprite(dispTexture);
         dispSprite.texture.baseTexture.wrapMode = WRAP_MODES.REPEAT;
-
         dispSprite.width = width;
         dispSprite.height = height;
         dispSprite.anchor.set(0.5);
@@ -81,16 +87,17 @@ export default function LiquidDistortion({
         displacementSprite.current = dispSprite;
         stage.addChild(dispSprite);
 
-        displacementFilter.current = new DisplacementFilter(dispSprite);
-        stage.filters = [displacementFilter.current];
+        const filter = new DisplacementFilter(dispSprite);
+        displacementFilter.current = filter;
+        stage.filters = [filter];
 
-        // Main sprites
-        sprites.forEach((src, index) => {
-            const texture = Texture.from(src);
+        // Add slide sprites
+        slides.forEach((slide, index) => {
+            const texture = Texture.from(slide.image);
 
-            const texWidth = texture.width || window.innerWidth;
-            const texHeight = texture.height || window.innerHeight;
-            const scale = Math.max(window.innerWidth / texWidth, window.innerHeight / texHeight);
+            const texWidth = texture.width || width;
+            const texHeight = texture.height || height;
+            const scale = Math.max(width / texWidth, height / texHeight);
 
             const sprite = new Sprite(texture);
             sprite.anchor.set(0.5);
@@ -103,6 +110,7 @@ export default function LiquidDistortion({
             container.addChild(sprite);
         });
 
+        // Animate displacement
         app.ticker.add(() => {
             if (displacementSprite.current) {
                 displacementSprite.current.x += autoPlaySpeed[0] * 0.3;
@@ -122,24 +130,24 @@ export default function LiquidDistortion({
         });
 
         return () => {
-            // ✅ Full cleanup
             if (appRef.current) {
-                appRef.current.destroy(true, { children: true, texture: true, baseTexture: true });
+                appRef.current.destroy(true, {
+                    children: true,
+                    texture: true,
+                    baseTexture: true,
+                });
                 appRef.current = null;
             }
             if (canvas.parentNode) {
                 canvas.parentNode.removeChild(canvas);
             }
             spriteRefs.current = [];
-            curIndex.current = 0;
         };
-    }, [loaded, sprites, displacementImage, autoPlaySpeed, displacementSize, distortionIntensity]);
+    }, [loaded, slides, displacementImage, autoPlaySpeed, displacementSize, distortionIntensity]);
 
-    // ✅ Transition Animations
     const transitionTo = (index: number) => {
-        const current = spriteRefs.current[curIndex.current];
+        const current = spriteRefs.current[curIndex];
         const next = spriteRefs.current[index];
-
         if (!current || !next || !displacementFilter.current) return;
 
         gsap.timeline()
@@ -157,29 +165,49 @@ export default function LiquidDistortion({
                 ease: 'power2.out',
             });
 
-        curIndex.current = index;
+        setCurIndex(index);
     };
 
     const nextSlide = () => {
-        const total = sprites.length;
-        const nextIndex = (curIndex.current + 1) % total;
+        const nextIndex = (curIndex + 1) % slides.length;
         transitionTo(nextIndex);
     };
 
     const prevSlide = () => {
-        const total = sprites.length;
-        const prevIndex = (curIndex.current - 1 + total) % total;
+        const prevIndex = (curIndex - 1 + slides.length) % slides.length;
         transitionTo(prevIndex);
     };
 
     return (
         <div className="relative w-full h-screen">
             <div ref={canvasRef} className="absolute inset-0 z-0" />
-            <div className="absolute bottom-8 left-8 z-10 space-x-4">
+                <div className="absolute inset-0 z-0 bg-black/40" />
+                    <div className="flex flex-col items-center justify-center gap-y-4 group h-full text-white">
+                        {slides[curIndex]?.link ? (
+                            <a href={slides[curIndex]?.link} className="text-white text-center" target="_blank" rel="noopener noreferrer">
+                                <h1 className="font-engravers text-4xl sm:text-6xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 leading-none">
+                                    {slides[curIndex]?.title}
+                                </h1>
+                                <h2 className="font-[200] font-newsreader sm:text-lg drop-shadow-lg transition-transform duration-300 group-hover:scale-105 leading-none">
+                                    “{slides[curIndex]?.quote}”
+                                </h2>
+                            </a>
+                        ) : (
+                            <>
+                                <h1 className="font-engravers text-4xl sm:text-6xl drop-shadow-lg transition-transform duration-300 group-hover:scale-110 leading-none">
+                                    {slides[curIndex]?.title}
+                                </h1>
+                                <h2 className="font-[200] font-newsreader sm:text-lg drop-shadow-lg transition-transform duration-300 group-hover:scale-105 leading-none">
+                                    “{slides[curIndex]?.quote}”
+                                </h2>
+                            </>
+                        )}
+                    </div>
+
+            <div className="absolute bottom-12 left-8 z-10 space-x-4">
                 <button
                     onClick={prevSlide}
-                    className="scene-nav scene-nav--prev px-6 py-3 bg-black/70 text-white uppercase tracking-widest hover:bg-black transition rounded-lg"
-                >
+                    className="scene-nav scene-nav--prev px-6 py-3 bg-black/70 text-white uppercase tracking-widest hover:bg-black transition rounded-lg">
                     Prev
                 </button>
                 <button

@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# Lead Developer - Colin Nguyen
+# Assistant Lead Developer - Sean Okamoto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Waishuangxi Interactive Storytelling Map
 
-Currently, two official plugins are available:
+This project is a multimedia-rich, interactive website that revitalizes the **Waishuangxi watershed** and surrounding Shilin District through immersive storytelling. It combines interviews, 3D mapping, and visual effects to preserve cultural identity, promote environmental awareness, and elevate local voices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌏 Project Goals
 
-## Expanding the ESLint configuration
+- **Preserve Shilin’s multicultural history** through interviews and digital curation
+- **Highlight the environmental significance** of the Waishuangxi watershed
+- **Create an engaging web experience** using animation, interactivity, and spatial storytelling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✨ Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 📍 **Interactive 3D map** with animated pins and clickable landmarks
+- 📍 **Interactive 2D map** with animated pins and clickable landmarks
+- 🌀 **Liquid Distortion Carousel** powered by PixiJS and GSAP for site navigation
+- 🗣️ **Memory collection archive** of local residents and experts
+- 🏞️ **Media integration** including photogrammetry, timelapses, and video
+- 📱 Fully **responsive design** for mobile and desktop
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠️ Tech Stack
+
+| Frontend            | Media Effects        | Deployment       |
+|---------------------|----------------------|------------------|
+| React + TypeScript  | PixiJS (WebGL)       | Vercel           |
+| Tailwind CSS        | GSAP for animations  | Cloudflare R2 (media) |
+| React Three Fiber   | Framer Motion        | Namecheap (domain) |
+
+---
+
+## 🔧 Setup Instructions
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/colinnguyen5/soochow.git
+cd soochow
+

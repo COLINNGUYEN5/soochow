@@ -78,7 +78,7 @@ export default function Location() {
                     imageSrc="/zhishanyan/front.jpg"/>
 
                 <LocationCards
-                    title="Shen Nong Temple"
+                    title="Shennong Temple"
                     description="Our team actually visited Shennong temple twice because of how beautiful it was, especially the insanely detailed roof. Shennong Temple is one of the three main ancient temples in Shilin, along with Zhishanyan’s Huiji Temple and Xinjie’s Cixian Temple."
                     link="/sites/shennong"
                     imageSrc="/shennong/front.jpg"/>

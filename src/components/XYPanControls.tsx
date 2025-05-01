@@ -72,8 +72,8 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
 
         // Set initial camera position and orientation
         camera.position.set(60, 20, 80);
-        camera.up.set(0, 1, 0); // ✅ Always keep camera upright
-        camera.lookAt(currentTarget.current); // ✅ Lock initial orientation toward target
+        camera.up.set(0, 1, 0); // Always keep camera upright
+        camera.lookAt(currentTarget.current); // Lock initial orientation toward target
 
         controls.target.copy(currentTarget.current);
         offsetRef.current = camera.position.clone().sub(controls.target);
@@ -108,7 +108,7 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             desiredZoomOffset.current = direction.multiplyScalar(pendingZoomDistance.current!);
             isZooming.current = true;
 
-            console.log("✅ Zoom started with distance:", pendingZoomDistance.current);
+            console.log("Zoom started with distance:", pendingZoomDistance.current);
 
             pendingZoomDistance.current = null;
             zoomTimeout.current = null;
@@ -138,9 +138,9 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             camera.position.copy(clampCamera(newCamPos));
         }
 
-        // ✅ Trigger zoom after panning (with delay)
+        // Trigger zoom after panning (with delay)
 
-        // ✅ Animate zooming by lerping the offset
+        // Animate zooming by lerping the offset
         if (isZooming.current && desiredZoomOffset.current && offsetRef.current) {
             offsetRef.current.lerp(desiredZoomOffset.current, 0.01);
 
@@ -154,7 +154,7 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             }
 
             const camPos = controls.target.clone().add(offsetRef.current);
-            camera.position.copy(camPos); // ⛔ No clamping while zooming
+            camera.position.copy(camPos); // No clamping while zooming
         }
 
         // ✅ Resume clamping only after zooming
@@ -208,9 +208,9 @@ export const XYPanControls = forwardRef<XYPanControlsHandle>((_, ref) => {
             enableZoom={true}
             enablePan={true}
             screenSpacePanning={true}
-            minPolarAngle={Math.PI / 5}  // ✅ lock to horizontal view
-            maxPolarAngle={Math.PI / 5}  // ✅ lock to horizontal view
-            minAzimuthAngle={0}           // ✅ Freeze horizontal rotation
+            minPolarAngle={Math.PI / 5}  // lock to horizontal view
+            maxPolarAngle={Math.PI / 5}  // lock to horizontal view
+            minAzimuthAngle={0}           // Freeze horizontal rotation
             maxAzimuthAngle={0}
             minDistance={10}
             maxDistance={12}

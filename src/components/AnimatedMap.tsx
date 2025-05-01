@@ -51,7 +51,7 @@ export function AnimatedMap() {
     };
 
     return (
-        <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden bg-black">
+        <div className="absolute top-0 left-0 w-screen h-screen overflow-hidden bg-black">
             <TransformWrapper
                 initialScale={initialScale}
                 initialPositionX={-400}
@@ -134,7 +134,7 @@ export function AnimatedMap() {
                         <CartoonPin
                             to="/sites/shennong"
                             icon="cartoon/shennong.svg"
-                            label="Shen Nong Temple"
+                            label="Shennong Temple"
                             top={75}
                             left={22}
                             width="4%"

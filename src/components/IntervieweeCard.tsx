@@ -15,7 +15,7 @@ export function IntervieweeCard({
                              circular = false,
                              imageClassName = 'w-24 h-24 object-cover rounded-full shadow-lg transition-transform duration-200',
                              nameClassName = 'mt-2 font-semibold text-center whitespace-pre-line',
-                             titleClassName = 'text-sm text-gray-600 text-center whitespace-pre-line',
+                             titleClassName = 'text-sm text-gray-600 text-center leading-tight',
                          }: {
     person: Interviewee;
     isSelected: boolean;

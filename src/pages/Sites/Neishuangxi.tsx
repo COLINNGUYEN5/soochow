@@ -1,6 +1,7 @@
 import {ImageModal} from "../../components/ImageModal.tsx";
 import ScrollDownButton from "../../components/ScrollDownButton.tsx";
 import WordHover from "../../components/WordHover.tsx";
+import {Link} from "react-router-dom";
 
 export default function Neishuangxi() {
     return (
@@ -42,7 +43,12 @@ export default function Neishuangxi() {
                         </figure>
                         <div>
                             <p className="sm:text-lg text-justify">
-                                Neishuangxi, combined with the Jingquexi river, is the inner part of the Waishuangxi.
+                                Neishuangxi, combined with the Jingquexi river, is the inner part of the
+                                {' '}
+                                <Link to="/sites/waishuangxi" className="text-blue-500 underline hover:text-blue-700">
+                                    Waishuangxi
+                                </Link>
+                                .
                                 There’s only one road that takes you up the mountain, and through walking this path,
                                 the team saw a story being depicted of Neishuangxi’s history.
                             </p>

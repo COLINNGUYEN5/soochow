@@ -11,7 +11,7 @@ export default function Collection() {
             name: 'Marissa Hu',
             title: 'National Palace Museum\nTour Guide',
             image: '/collection/marissa.jpg',
-            quote: "I showed her [Marissa's daughter] how to jump from one big rock to another rock in the river.",
+            quote: "I showed my daughter how to jump from one big rock to another rock in the river.",
             portrait: "/collection/marissa.jpg",
             bio: "Marissa Hu is a volunteer tour guide for the National Palace Museum (NPM). She loves Chinese calligraphy, and came to volunteer at the NPM because she has a passion for learning more about calligraphy at the museum. Through volunteering, she is exposed to an extensive collection of the history of calligraphy and she enjoys sharing the knowledge she learns at the museum with others."
         },
@@ -155,7 +155,7 @@ export default function Collection() {
                                     return (
                                         <div
                                             key={person.name}
-                                            className="absolute left-1/2 top-1/2"
+                                            className="absolute left-1/2 top-1/2 origin-center"
                                             style={{
                                                 transform: `rotate(${angle}deg) translate(calc(min(35vw, 270px))) rotate(-${angle}deg)`
                                             }}

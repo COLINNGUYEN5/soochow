@@ -8,7 +8,7 @@ export default function Waishuangxi() {
         <div className="overflow-y-auto">
             <div className="relative w-full h-full overflow-hidden rounded-b shadow">
                 <video
-                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Soochow_B-Roll.mp4"
+                    src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/Waishuangxi_B-Roll.mp4"
                     autoPlay
                     muted
                     loop
@@ -67,7 +67,11 @@ export default function Waishuangxi() {
                                 ,
                                 {' '}
                                 <WordHover label="Marissa" src="/collection/marissa.jpg" />
-                                , shared that she used to bring her daughter to the river to skip across the rocks when she was young.
+                                , shared that she used to bring her daughter to the river to skip across the
+                                {' '}
+                                <WordHover label="rocks" src="https://pub-61be2e1134b34ab087b28b1b2f3f2054.r2.dev/rock.MP4" />
+                                {' '}
+                                when she was young.
                                 Her daughter disliked sports, so Marissa found that this was a fun way for her to get some exercise. Technically,
                                 although much of the river has been modified through government intervention, the areas with rocks remain mostly natural.
                                 In recent years, many of these natural sections have been closed to the public for safety reasons. However,
