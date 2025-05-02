@@ -17,13 +17,19 @@ export default function About() {
                     Using these themes below, we developed a story of Shilin in our map that highlights the importance of the Waishuangxi and its ties to Shilin’s identity.
                 </p>
                 <br/>
-                <div>
+                <div className="flex flex-col w-full h-full">
                     <ul className="flex flex-col sm:flex-row sm:justify-between lg:px-16 text-2xl font-bold">
                         <li>Multiculturalism</li>
                         <li>Interconnectedness</li>
                         <li>Third Place</li>
                     </ul>
                     <br/>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4SK2D6oUgXg?si=KmxzHGMV3z9m-yCW"
+                            title="YouTube video player" frameBorder="0"
+                            className="place-self-center"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen></iframe>
                 </div>
             </div>
 
