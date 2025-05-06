@@ -80,7 +80,7 @@ export default function Collection() {
                 {/* Left side with title */}
                 <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
                     <h2 className="text-xl md:text-2xl lg:text-3xl text-center">
-                        We ask each of our interviewee:
+                        We asked each of our interviewees:
                     </h2>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center p-2 sm:p-8">
                         "What's your favourite memory by the river?"
